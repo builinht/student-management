@@ -24,7 +24,7 @@ CREATE TABLE [dbo].[tblSubject]
 	[subjectName] [varchar](50) NULL,
 	[majorID] [varchar](20) NOT NULL, 
 	CONSTRAINT [PK_tblSubject_subjectID] PRIMARY KEY([subjectID]),
-	CONSTRAINT [FK_tblSubject_smajorID] FOREIGN KEY([majorID]) REFERENCES [dbo].[tblMajor]([majorID])
+	CONSTRAINT [FK_tblSubject_majorID] FOREIGN KEY([majorID]) REFERENCES [dbo].[tblMajor]([majorID])
 )
 
 /*Object: Table [dbo].[tblCourse]*/

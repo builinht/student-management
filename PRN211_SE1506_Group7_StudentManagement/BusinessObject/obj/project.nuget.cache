@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "mlnC2O3uxeyCSMESHvIgm6tt+T0MaUAeIPf383qtiYg8zB4TwYu7AgkjTkFiW1jOtzxlO+52tSLhbBzV959O4w==",
+  "dgSpecHash": "LLzFHJnWKpfobB/zxzEOs2b9b70p7EHL3yz5L+e/D1cSmsVBhoty7MofW1+YXxtFHyyhrQSHcOIVAxRYXPoWHQ==",
   "success": true,
-  "projectFilePath": "D:\\PRN211\\PRN211_SE1506_Group7_StudentManagement\\BusinessObject\\BusinessObject.csproj",
+  "projectFilePath": "E:\\student-management\\PRN211_SE1506_Group7_StudentManagement\\BusinessObject\\BusinessObject.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
