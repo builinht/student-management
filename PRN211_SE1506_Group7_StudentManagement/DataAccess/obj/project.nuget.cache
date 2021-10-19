@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "JoCoIrg9MwaAJ6bT9SAk58+Tu538VTXybbyOo6eTBeKYG2yuWLZ0GK8tu2IemBfJxbyA1X4QQJ95NOcQe56eig==",
+  "dgSpecHash": "UELdOhfbknLejMTvKQh+GAycNXIAzOkWblTulcqpu5+TJwKV4uQFYXHjFwYIWEVQKzTK3e+OI5+6VlWUOaJsiw==",
   "success": true,
-  "projectFilePath": "D:\\PRN211\\PRN211_SE1506_Group7_StudentManagement\\DataAccess\\DataAccess.csproj",
+  "projectFilePath": "E:\\student-management\\PRN211_SE1506_Group7_StudentManagement\\DataAccess\\DataAccess.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
