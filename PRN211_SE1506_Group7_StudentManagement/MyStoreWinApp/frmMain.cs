@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BusinessObject;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,20 @@ namespace MyStoreWinApp
 {
     public partial class frmMain : Form
     {
-        public frmMain()
+        UserObject user ;
+        StudentObject student;
+        public frmMain(UserObject user)
         {
+            this.user = user;
             InitializeComponent();
+        }
+
+
+        private void studentToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmStudentManagement frm = new frmStudentManagement(student);
+            frm.MdiParent = this;
+            frm.Show();
         }
     }
 }

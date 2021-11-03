@@ -1,25 +1,21 @@
 {
   "format": 1,
   "restore": {
-    "E:\\student-management\\PRN211_SE1506_Group7_StudentManagement\\MyStoreWinApp\\MyStoreWinApp.csproj": {}
+    "D:\\C# code\\student-management\\PRN211_SE1506_Group7_StudentManagement\\MyStoreWinApp\\MyStoreWinApp.csproj": {}
   },
   "projects": {
-    "E:\\student-management\\PRN211_SE1506_Group7_StudentManagement\\BusinessObject\\BusinessObject.csproj": {
+    "D:\\C# code\\student-management\\PRN211_SE1506_Group7_StudentManagement\\BusinessObject\\BusinessObject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\student-management\\PRN211_SE1506_Group7_StudentManagement\\BusinessObject\\BusinessObject.csproj",
+        "projectUniqueName": "D:\\C# code\\student-management\\PRN211_SE1506_Group7_StudentManagement\\BusinessObject\\BusinessObject.csproj",
         "projectName": "BusinessObject",
-        "projectPath": "E:\\student-management\\PRN211_SE1506_Group7_StudentManagement\\BusinessObject\\BusinessObject.csproj",
-        "packagesPath": "C:\\Users\\buili\\.nuget\\packages\\",
-        "outputPath": "E:\\student-management\\PRN211_SE1506_Group7_StudentManagement\\BusinessObject\\obj\\",
+        "projectPath": "D:\\C# code\\student-management\\PRN211_SE1506_Group7_StudentManagement\\BusinessObject\\BusinessObject.csproj",
+        "packagesPath": "C:\\Users\\KawaiiScorpy\\.nuget\\packages\\",
+        "outputPath": "D:\\C# code\\student-management\\PRN211_SE1506_Group7_StudentManagement\\BusinessObject\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
-        ],
         "configFilePaths": [
-          "C:\\Users\\buili\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\KawaiiScorpy\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -43,6 +39,24 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.Data.SqlClient": {
+              "target": "Package",
+              "version": "[3.0.1, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Binder": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Json": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -58,26 +72,22 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\student-management\\PRN211_SE1506_Group7_StudentManagement\\DataAccess\\DataAccess.csproj": {
+    "D:\\C# code\\student-management\\PRN211_SE1506_Group7_StudentManagement\\DataAccess\\DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\student-management\\PRN211_SE1506_Group7_StudentManagement\\DataAccess\\DataAccess.csproj",
+        "projectUniqueName": "D:\\C# code\\student-management\\PRN211_SE1506_Group7_StudentManagement\\DataAccess\\DataAccess.csproj",
         "projectName": "DataAccess",
-        "projectPath": "E:\\student-management\\PRN211_SE1506_Group7_StudentManagement\\DataAccess\\DataAccess.csproj",
-        "packagesPath": "C:\\Users\\buili\\.nuget\\packages\\",
-        "outputPath": "E:\\student-management\\PRN211_SE1506_Group7_StudentManagement\\DataAccess\\obj\\",
+        "projectPath": "D:\\C# code\\student-management\\PRN211_SE1506_Group7_StudentManagement\\DataAccess\\DataAccess.csproj",
+        "packagesPath": "C:\\Users\\KawaiiScorpy\\.nuget\\packages\\",
+        "outputPath": "D:\\C# code\\student-management\\PRN211_SE1506_Group7_StudentManagement\\DataAccess\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
-        ],
         "configFilePaths": [
-          "C:\\Users\\buili\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\KawaiiScorpy\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -90,8 +100,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "E:\\student-management\\PRN211_SE1506_Group7_StudentManagement\\BusinessObject\\BusinessObject.csproj": {
-                "projectPath": "E:\\student-management\\PRN211_SE1506_Group7_StudentManagement\\BusinessObject\\BusinessObject.csproj"
+              "D:\\C# code\\student-management\\PRN211_SE1506_Group7_StudentManagement\\BusinessObject\\BusinessObject.csproj": {
+                "projectPath": "D:\\C# code\\student-management\\PRN211_SE1506_Group7_StudentManagement\\BusinessObject\\BusinessObject.csproj"
               }
             }
           }
@@ -105,6 +115,24 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.Data.SqlClient": {
+              "target": "Package",
+              "version": "[3.0.1, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Binder": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Json": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -120,26 +148,22 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\student-management\\PRN211_SE1506_Group7_StudentManagement\\MyStoreWinApp\\MyStoreWinApp.csproj": {
+    "D:\\C# code\\student-management\\PRN211_SE1506_Group7_StudentManagement\\MyStoreWinApp\\MyStoreWinApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\student-management\\PRN211_SE1506_Group7_StudentManagement\\MyStoreWinApp\\MyStoreWinApp.csproj",
+        "projectUniqueName": "D:\\C# code\\student-management\\PRN211_SE1506_Group7_StudentManagement\\MyStoreWinApp\\MyStoreWinApp.csproj",
         "projectName": "MyStoreWinApp",
-        "projectPath": "E:\\student-management\\PRN211_SE1506_Group7_StudentManagement\\MyStoreWinApp\\MyStoreWinApp.csproj",
-        "packagesPath": "C:\\Users\\buili\\.nuget\\packages\\",
-        "outputPath": "E:\\student-management\\PRN211_SE1506_Group7_StudentManagement\\MyStoreWinApp\\obj\\",
+        "projectPath": "D:\\C# code\\student-management\\PRN211_SE1506_Group7_StudentManagement\\MyStoreWinApp\\MyStoreWinApp.csproj",
+        "packagesPath": "C:\\Users\\KawaiiScorpy\\.nuget\\packages\\",
+        "outputPath": "D:\\C# code\\student-management\\PRN211_SE1506_Group7_StudentManagement\\MyStoreWinApp\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
-        ],
         "configFilePaths": [
-          "C:\\Users\\buili\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\KawaiiScorpy\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0-windows7.0"
@@ -152,11 +176,11 @@
           "net5.0-windows7.0": {
             "targetAlias": "net5.0-windows",
             "projectReferences": {
-              "E:\\student-management\\PRN211_SE1506_Group7_StudentManagement\\BusinessObject\\BusinessObject.csproj": {
-                "projectPath": "E:\\student-management\\PRN211_SE1506_Group7_StudentManagement\\BusinessObject\\BusinessObject.csproj"
+              "D:\\C# code\\student-management\\PRN211_SE1506_Group7_StudentManagement\\BusinessObject\\BusinessObject.csproj": {
+                "projectPath": "D:\\C# code\\student-management\\PRN211_SE1506_Group7_StudentManagement\\BusinessObject\\BusinessObject.csproj"
               },
-              "E:\\student-management\\PRN211_SE1506_Group7_StudentManagement\\DataAccess\\DataAccess.csproj": {
-                "projectPath": "E:\\student-management\\PRN211_SE1506_Group7_StudentManagement\\DataAccess\\DataAccess.csproj"
+              "D:\\C# code\\student-management\\PRN211_SE1506_Group7_StudentManagement\\DataAccess\\DataAccess.csproj": {
+                "projectPath": "D:\\C# code\\student-management\\PRN211_SE1506_Group7_StudentManagement\\DataAccess\\DataAccess.csproj"
               }
             }
           }
@@ -170,6 +194,24 @@
       "frameworks": {
         "net5.0-windows7.0": {
           "targetAlias": "net5.0-windows",
+          "dependencies": {
+            "Microsoft.Data.SqlClient": {
+              "target": "Package",
+              "version": "[3.0.1, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Binder": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Json": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -188,7 +230,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     }

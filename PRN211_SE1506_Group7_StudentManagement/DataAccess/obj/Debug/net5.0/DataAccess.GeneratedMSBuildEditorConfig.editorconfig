@@ -7,4 +7,4 @@ build_property.PublishSingleFile =
 build_property.IncludeAllContentForSelfExtract = 
 build_property._SupportedPlatformList = Android,iOS,Linux,macOS,Windows
 build_property.RootNamespace = DataAccess
-build_property.ProjectDir = E:\student-management\PRN211_SE1506_Group7_StudentManagement\DataAccess\
+build_property.ProjectDir = D:\C# code\student-management\PRN211_SE1506_Group7_StudentManagement\DataAccess\
