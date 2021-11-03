@@ -59,7 +59,6 @@ CREATE TABLE [dbo].[tblMark]
 	[Assignment] [int] NULL,
 	[Practical] [int] NULL,
 	[Final] [int] NULL,
-	[GPA] [int] NULL,
 	[courseID] [int] NOT NULL,
 	[studentID] [varchar](20) NOT NULL,
 	CONSTRAINT [PK_tblMark_studentID_courseID] PRIMARY KEY([studentID],[courseID]),

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\student-management\\PRN211_SE1506_Group7_StudentManagement\\DataAccess\\DataAccess.csproj": {}
+    "C:\\Users\\buili\\Desktop\\student-management-daitran\\PRN211_SE1506_Group7_StudentManagement\\DataAccess\\DataAccess.csproj": {}
   },
   "projects": {
-    "E:\\student-management\\PRN211_SE1506_Group7_StudentManagement\\BusinessObject\\BusinessObject.csproj": {
+    "C:\\Users\\buili\\Desktop\\student-management-daitran\\PRN211_SE1506_Group7_StudentManagement\\BusinessObject\\BusinessObject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\student-management\\PRN211_SE1506_Group7_StudentManagement\\BusinessObject\\BusinessObject.csproj",
+        "projectUniqueName": "C:\\Users\\buili\\Desktop\\student-management-daitran\\PRN211_SE1506_Group7_StudentManagement\\BusinessObject\\BusinessObject.csproj",
         "projectName": "BusinessObject",
-        "projectPath": "E:\\student-management\\PRN211_SE1506_Group7_StudentManagement\\BusinessObject\\BusinessObject.csproj",
+        "projectPath": "C:\\Users\\buili\\Desktop\\student-management-daitran\\PRN211_SE1506_Group7_StudentManagement\\BusinessObject\\BusinessObject.csproj",
         "packagesPath": "C:\\Users\\buili\\.nuget\\packages\\",
-        "outputPath": "E:\\student-management\\PRN211_SE1506_Group7_StudentManagement\\BusinessObject\\obj\\",
+        "outputPath": "C:\\Users\\buili\\Desktop\\student-management-daitran\\PRN211_SE1506_Group7_StudentManagement\\BusinessObject\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
@@ -43,6 +43,24 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.Data.SqlClient": {
+              "target": "Package",
+              "version": "[3.0.1, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Binder": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Json": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -62,14 +80,14 @@
         }
       }
     },
-    "E:\\student-management\\PRN211_SE1506_Group7_StudentManagement\\DataAccess\\DataAccess.csproj": {
+    "C:\\Users\\buili\\Desktop\\student-management-daitran\\PRN211_SE1506_Group7_StudentManagement\\DataAccess\\DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\student-management\\PRN211_SE1506_Group7_StudentManagement\\DataAccess\\DataAccess.csproj",
+        "projectUniqueName": "C:\\Users\\buili\\Desktop\\student-management-daitran\\PRN211_SE1506_Group7_StudentManagement\\DataAccess\\DataAccess.csproj",
         "projectName": "DataAccess",
-        "projectPath": "E:\\student-management\\PRN211_SE1506_Group7_StudentManagement\\DataAccess\\DataAccess.csproj",
+        "projectPath": "C:\\Users\\buili\\Desktop\\student-management-daitran\\PRN211_SE1506_Group7_StudentManagement\\DataAccess\\DataAccess.csproj",
         "packagesPath": "C:\\Users\\buili\\.nuget\\packages\\",
-        "outputPath": "E:\\student-management\\PRN211_SE1506_Group7_StudentManagement\\DataAccess\\obj\\",
+        "outputPath": "C:\\Users\\buili\\Desktop\\student-management-daitran\\PRN211_SE1506_Group7_StudentManagement\\DataAccess\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
@@ -90,8 +108,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "E:\\student-management\\PRN211_SE1506_Group7_StudentManagement\\BusinessObject\\BusinessObject.csproj": {
-                "projectPath": "E:\\student-management\\PRN211_SE1506_Group7_StudentManagement\\BusinessObject\\BusinessObject.csproj"
+              "C:\\Users\\buili\\Desktop\\student-management-daitran\\PRN211_SE1506_Group7_StudentManagement\\BusinessObject\\BusinessObject.csproj": {
+                "projectPath": "C:\\Users\\buili\\Desktop\\student-management-daitran\\PRN211_SE1506_Group7_StudentManagement\\BusinessObject\\BusinessObject.csproj"
               }
             }
           }
@@ -105,6 +123,24 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.Data.SqlClient": {
+              "target": "Package",
+              "version": "[3.0.1, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Binder": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Json": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

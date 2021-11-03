@@ -1,0 +1,14 @@
+D:\C# code\student-management\PRN211_SE1506_Group7_StudentManagement\DataAccess\bin\Debug\net5.0\DataAccess.deps.json
+D:\C# code\student-management\PRN211_SE1506_Group7_StudentManagement\DataAccess\bin\Debug\net5.0\DataAccess.dll
+D:\C# code\student-management\PRN211_SE1506_Group7_StudentManagement\DataAccess\bin\Debug\net5.0\ref\DataAccess.dll
+D:\C# code\student-management\PRN211_SE1506_Group7_StudentManagement\DataAccess\bin\Debug\net5.0\DataAccess.pdb
+D:\C# code\student-management\PRN211_SE1506_Group7_StudentManagement\DataAccess\bin\Debug\net5.0\BusinessObject.dll
+D:\C# code\student-management\PRN211_SE1506_Group7_StudentManagement\DataAccess\bin\Debug\net5.0\BusinessObject.pdb
+D:\C# code\student-management\PRN211_SE1506_Group7_StudentManagement\DataAccess\obj\Debug\net5.0\DataAccess.csproj.AssemblyReference.cache
+D:\C# code\student-management\PRN211_SE1506_Group7_StudentManagement\DataAccess\obj\Debug\net5.0\DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+D:\C# code\student-management\PRN211_SE1506_Group7_StudentManagement\DataAccess\obj\Debug\net5.0\DataAccess.AssemblyInfoInputs.cache
+D:\C# code\student-management\PRN211_SE1506_Group7_StudentManagement\DataAccess\obj\Debug\net5.0\DataAccess.AssemblyInfo.cs
+D:\C# code\student-management\PRN211_SE1506_Group7_StudentManagement\DataAccess\obj\Debug\net5.0\DataAccess.csproj.CoreCompileInputs.cache
+D:\C# code\student-management\PRN211_SE1506_Group7_StudentManagement\DataAccess\obj\Debug\net5.0\DataAccess.dll
+D:\C# code\student-management\PRN211_SE1506_Group7_StudentManagement\DataAccess\obj\Debug\net5.0\ref\DataAccess.dll
+D:\C# code\student-management\PRN211_SE1506_Group7_StudentManagement\DataAccess\obj\Debug\net5.0\DataAccess.pdb
