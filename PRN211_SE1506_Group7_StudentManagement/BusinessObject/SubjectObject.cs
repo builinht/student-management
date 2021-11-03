@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace BusinessObject
 {
-    class SubjectObject
+    public class SubjectObject
     {
+        public int SubjectID { get; set; }
+        public string SubjectName { get; set; }
+        public int MajorID { get; set; }
     }
 }
