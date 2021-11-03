@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\KawaiiScorpy\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\KawaiiScorpy\\.nuget\\packages"
+    ]
+  }
+}
