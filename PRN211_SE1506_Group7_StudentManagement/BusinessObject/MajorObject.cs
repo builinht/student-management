@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace BusinessObject
 {
-    class MajorObject
+    public class MarkObject
     {
+        public int courseID { get; set; }
+        public string studentID { get; set; }
+        public double Assignment { get; set; }
+        public double Practical { get; set; }
+        public double Final { get; set; }
+        public double GPA { get; set; }
     }
 }

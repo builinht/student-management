@@ -1896,11 +1896,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\buili\\Desktop\\student-management-daitran\\PRN211_SE1506_Group7_StudentManagement\\DataAccess\\DataAccess.csproj",
+      "projectUniqueName": "E:\\student-management\\PRN211_SE1506_Group7_StudentManagement\\DataAccess\\DataAccess.csproj",
       "projectName": "DataAccess",
-      "projectPath": "C:\\Users\\buili\\Desktop\\student-management-daitran\\PRN211_SE1506_Group7_StudentManagement\\DataAccess\\DataAccess.csproj",
+      "projectPath": "E:\\student-management\\PRN211_SE1506_Group7_StudentManagement\\DataAccess\\DataAccess.csproj",
       "packagesPath": "C:\\Users\\buili\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\buili\\Desktop\\student-management-daitran\\PRN211_SE1506_Group7_StudentManagement\\DataAccess\\obj\\",
+      "outputPath": "E:\\student-management\\PRN211_SE1506_Group7_StudentManagement\\DataAccess\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
@@ -1921,8 +1921,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\buili\\Desktop\\student-management-daitran\\PRN211_SE1506_Group7_StudentManagement\\BusinessObject\\BusinessObject.csproj": {
-              "projectPath": "C:\\Users\\buili\\Desktop\\student-management-daitran\\PRN211_SE1506_Group7_StudentManagement\\BusinessObject\\BusinessObject.csproj"
+            "E:\\student-management\\PRN211_SE1506_Group7_StudentManagement\\BusinessObject\\BusinessObject.csproj": {
+              "projectPath": "E:\\student-management\\PRN211_SE1506_Group7_StudentManagement\\BusinessObject\\BusinessObject.csproj"
             }
           }
         }
