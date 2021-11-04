@@ -110,3 +110,17 @@ C:\Users\buili\Desktop\student-management-daitran\PRN211_SE1506_Group7_StudentMa
 C:\Users\buili\Desktop\student-management-daitran\PRN211_SE1506_Group7_StudentManagement\MyStoreWinApp\obj\Debug\net5.0-windows\ref\MyStoreWinApp.dll
 C:\Users\buili\Desktop\student-management-daitran\PRN211_SE1506_Group7_StudentManagement\MyStoreWinApp\obj\Debug\net5.0-windows\MyStoreWinApp.pdb
 C:\Users\buili\Desktop\student-management-daitran\PRN211_SE1506_Group7_StudentManagement\MyStoreWinApp\obj\Debug\net5.0-windows\MyStoreWinApp.genruntimeconfig.cache
+E:\student-management\PRN211_SE1506_Group7_StudentManagement\MyStoreWinApp\obj\Debug\net5.0-windows\MyStoreWinApp.csproj.AssemblyReference.cache
+E:\student-management\PRN211_SE1506_Group7_StudentManagement\MyStoreWinApp\obj\Debug\net5.0-windows\MyStoreWinApp.frmLogin.resources
+E:\student-management\PRN211_SE1506_Group7_StudentManagement\MyStoreWinApp\obj\Debug\net5.0-windows\MyStoreWinApp.frmMain.resources
+E:\student-management\PRN211_SE1506_Group7_StudentManagement\MyStoreWinApp\obj\Debug\net5.0-windows\MyStoreWinApp.frmMark.resources
+E:\student-management\PRN211_SE1506_Group7_StudentManagement\MyStoreWinApp\obj\Debug\net5.0-windows\MyStoreWinApp.frmStudentDetail.resources
+E:\student-management\PRN211_SE1506_Group7_StudentManagement\MyStoreWinApp\obj\Debug\net5.0-windows\MyStoreWinApp.frmStudentManagement.resources
+E:\student-management\PRN211_SE1506_Group7_StudentManagement\MyStoreWinApp\obj\Debug\net5.0-windows\MyStoreWinApp.csproj.GenerateResource.cache
+E:\student-management\PRN211_SE1506_Group7_StudentManagement\MyStoreWinApp\obj\Debug\net5.0-windows\MyStoreWinApp.GeneratedMSBuildEditorConfig.editorconfig
+E:\student-management\PRN211_SE1506_Group7_StudentManagement\MyStoreWinApp\obj\Debug\net5.0-windows\MyStoreWinApp.AssemblyInfoInputs.cache
+E:\student-management\PRN211_SE1506_Group7_StudentManagement\MyStoreWinApp\obj\Debug\net5.0-windows\MyStoreWinApp.AssemblyInfo.cs
+E:\student-management\PRN211_SE1506_Group7_StudentManagement\MyStoreWinApp\obj\Debug\net5.0-windows\MyStoreWinApp.csproj.CoreCompileInputs.cache
+E:\student-management\PRN211_SE1506_Group7_StudentManagement\MyStoreWinApp\obj\Debug\net5.0-windows\MyStoreWinApp.dll
+E:\student-management\PRN211_SE1506_Group7_StudentManagement\MyStoreWinApp\obj\Debug\net5.0-windows\ref\MyStoreWinApp.dll
+E:\student-management\PRN211_SE1506_Group7_StudentManagement\MyStoreWinApp\obj\Debug\net5.0-windows\MyStoreWinApp.pdb
