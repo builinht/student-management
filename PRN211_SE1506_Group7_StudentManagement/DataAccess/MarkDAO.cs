@@ -46,7 +46,7 @@ namespace DataAccess
                         Assignment = dataReader.GetInt32(2),
                         Practical = dataReader.GetInt32(3),
                         Final = dataReader.GetInt32(4),
-                        GPA = dataReader.GetInt32(5)                       
+                        GPA = dataReader.GetInt32(5)
                     });
                 }
             }
@@ -83,7 +83,7 @@ namespace DataAccess
                         Assignment = dataReader.GetInt32(2),
                         Practical = dataReader.GetInt32(3),
                         Final = dataReader.GetInt32(4),
-                        GPA =dataReader.GetInt32(5)
+                        GPA = dataReader.GetInt32(5)
                     };
                 }
             }
@@ -199,4 +199,3 @@ namespace DataAccess
         }
     }
 }
-

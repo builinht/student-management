@@ -13,6 +13,6 @@ namespace BusinessObject
         public int Assignment { get; set; }
         public int Practical { get; set; }
         public int Final { get; set; }
-        public int GPA { get; set; }       
+        public int GPA { get; set; }
     }
 }
