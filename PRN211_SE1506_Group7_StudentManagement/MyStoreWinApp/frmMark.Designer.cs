@@ -134,7 +134,7 @@ namespace MyStoreWinApp
             // 
             // txtGPA
             // 
-            this.txtGPA.Location = new System.Drawing.Point(532, 187);
+            this.txtGPA.Location = new System.Drawing.Point(681, 129);
             this.txtGPA.Name = "txtGPA";
             this.txtGPA.Size = new System.Drawing.Size(125, 27);
             this.txtGPA.TabIndex = 11;
@@ -208,6 +208,7 @@ namespace MyStoreWinApp
             this.cboCourseID.Name = "cboCourseID";
             this.cboCourseID.Size = new System.Drawing.Size(125, 28);
             this.cboCourseID.TabIndex = 17;
+            this.cboCourseID.SelectedIndexChanged += new System.EventHandler(this.cboCourseID_SelectedIndexChanged);
             // 
             // btnSave
             // 
@@ -217,6 +218,7 @@ namespace MyStoreWinApp
             this.btnSave.TabIndex = 18;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // frmMark
             // 

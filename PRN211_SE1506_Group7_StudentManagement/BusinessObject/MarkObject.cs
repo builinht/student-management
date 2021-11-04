@@ -10,9 +10,9 @@ namespace BusinessObject
     {
         public int courseID { get; set; }
         public string studentID { get; set; }
-        public int Assignment { get; set; }
-        public int Practical { get; set; }
-        public int Final { get; set; }
-        public int GPA { get; set; }
+        public double Assignment { get; set; }
+        public double Practical { get; set; }
+        public double Final { get; set; }
+        public double GPA { get; set; }
     }
 }

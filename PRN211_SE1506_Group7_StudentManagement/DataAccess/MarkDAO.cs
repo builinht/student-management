@@ -43,10 +43,10 @@ namespace DataAccess
                     {
                         courseID = dataReader.GetInt32(0),
                         studentID = dataReader.GetString(1),
-                        Assignment = dataReader.GetInt32(2),
-                        Practical = dataReader.GetInt32(3),
-                        Final = dataReader.GetInt32(4),
-                        GPA = dataReader.GetInt32(5)
+                        Assignment = dataReader.GetDouble(2),
+                        Practical = dataReader.GetDouble(3),
+                        Final = dataReader.GetDouble(4),
+                        GPA = dataReader.GetDouble(5)
                     });
                 }
             }
@@ -80,10 +80,10 @@ namespace DataAccess
                     {
                         courseID = dataReader.GetInt32(0),
                         studentID = dataReader.GetString(1),
-                        Assignment = dataReader.GetInt32(2),
-                        Practical = dataReader.GetInt32(3),
-                        Final = dataReader.GetInt32(4),
-                        GPA = dataReader.GetInt32(5)
+                        Assignment = dataReader.GetDouble(2),
+                        Practical = dataReader.GetDouble(3),
+                        Final = dataReader.GetDouble(4),
+                        GPA = dataReader.GetDouble(5)
                     };
                 }
             }
@@ -111,10 +111,10 @@ namespace DataAccess
                     var parameters = new List<SqlParameter>();
                     parameters.Add(dataProvider.CreateParameter("@courseID", 10, mark.courseID, DbType.Int32));
                     parameters.Add(dataProvider.CreateParameter("@studentID", 20, mark.studentID, DbType.String));
-                    parameters.Add(dataProvider.CreateParameter("@Assignment", 10, mark.Assignment, DbType.Int32));
-                    parameters.Add(dataProvider.CreateParameter("@Practical", 10, mark.Practical, DbType.Int32));
-                    parameters.Add(dataProvider.CreateParameter("@Final", 10, mark.Final, DbType.Int32));
-                    parameters.Add(dataProvider.CreateParameter("@GPA", 10, mark.GPA, DbType.Int32));
+                    parameters.Add(dataProvider.CreateParameter("@Assignment", 10, mark.Assignment, DbType.Double));
+                    parameters.Add(dataProvider.CreateParameter("@Practical", 10, mark.Practical, DbType.Double));
+                    parameters.Add(dataProvider.CreateParameter("@Final", 10, mark.Final, DbType.Double));
+                    parameters.Add(dataProvider.CreateParameter("@GPA", 10, mark.GPA, DbType.Double));
 
                     dataProvider.Insert(SQLInsert, CommandType.Text, parameters.ToArray());
 
@@ -147,10 +147,10 @@ namespace DataAccess
 
                     parameters.Add(dataProvider.CreateParameter("@courseID", 10, mark.courseID, DbType.Int32));
                     parameters.Add(dataProvider.CreateParameter("@studentID", 20, mark.studentID, DbType.String));
-                    parameters.Add(dataProvider.CreateParameter("@Assignment", 10, mark.Assignment, DbType.Int32));
-                    parameters.Add(dataProvider.CreateParameter("@Practical", 10, mark.Practical, DbType.Int32));
-                    parameters.Add(dataProvider.CreateParameter("@Final", 10, mark.Final, DbType.Int32));
-                    parameters.Add(dataProvider.CreateParameter("@GPA", 10, mark.GPA, DbType.Int32));
+                    parameters.Add(dataProvider.CreateParameter("@Assignment", 10, mark.Assignment, DbType.Double));
+                    parameters.Add(dataProvider.CreateParameter("@Practical", 10, mark.Practical, DbType.Double));
+                    parameters.Add(dataProvider.CreateParameter("@Final", 10, mark.Final, DbType.Double));
+                    parameters.Add(dataProvider.CreateParameter("@GPA", 10, mark.GPA, DbType.Double));
                     dataProvider.Update(SQLInsert, CommandType.Text, parameters.ToArray());
 
                 }
