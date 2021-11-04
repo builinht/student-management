@@ -78,15 +78,21 @@ namespace MyStoreWinApp
             btnUpdate.Enabled = false;
             btnDelete.Enabled = false;
         }
+        bool add;
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-
+            SetNull();
+            add = true;
+            UnlockText();
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-
+            if(add == true)
+            {
+                markRepository.InsertMark(int.Parse(cboCourseID.SelectedValue.ToString()), int.Parse(txtStudentID.Text), int.Parse(txtAssignment.Text), int.);
+            }
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
