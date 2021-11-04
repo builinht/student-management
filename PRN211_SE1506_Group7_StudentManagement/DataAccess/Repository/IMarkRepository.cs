@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace DataAccess.Repository
 {
-    class IMarkRepository
+    public interface IMarkRepository
     {
+        IEnumerable<MarkObject> GetMarks();
+        MarkObject GetMarkByCoIDAndStID(int courseID, string studentID);
+        void InsertMark(MarkObject mark);
+        void DeleteMark(int courseID, string studentID);
+        void UpdateMark(MarkObject mark);
     }
 }
