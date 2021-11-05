@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BusinessObject
+namespace DataAccess.Repository
 {
-    class MajorObject
+    class MarkRepository
     {
     }
 }

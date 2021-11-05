@@ -10,9 +10,6 @@
     <Compile Update="frmMark.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="frmMarkDetail.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="frmStudentManagement.cs">
       <SubType>Form</SubType>
     </Compile>
