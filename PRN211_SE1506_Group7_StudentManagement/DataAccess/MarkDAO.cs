@@ -139,7 +139,7 @@ namespace DataAccess
                 MarkObject o = GetMarkByCoIDAndStID(mark.courseID, mark.studentID);
                 if (o != null)
                 {
-                    string SQLUpdate = "Update tblMark set Assignment=@Assigment ,Practical=@Practical, Final=@Final where courseID=@courseID and studentID=@studentID";
+                    string SQLUpdate = "Update tblMark set Assignment=@Assignment ,Practical=@Practical, Final=@Final where courseID=@courseID and studentID=@studentID";
                     var parameters = new List<SqlParameter>();
                     parameters.Add(dataProvider.CreateParameter("@courseID", 10, mark.courseID, DbType.Int32));
                     parameters.Add(dataProvider.CreateParameter("@studentID", 20, mark.studentID, DbType.String));
