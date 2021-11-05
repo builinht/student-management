@@ -132,6 +132,7 @@ namespace MyStoreWinApp
             this.dgvMark.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvMark.Location = new System.Drawing.Point(37, 277);
             this.dgvMark.Name = "dgvMark";
+            this.dgvMark.ReadOnly = true;
             this.dgvMark.RowHeadersWidth = 51;
             this.dgvMark.RowTemplate.Height = 29;
             this.dgvMark.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
