@@ -153,7 +153,6 @@ E:\student-management\PRN211_SE1506_Group7_StudentManagement\MyStoreWinApp\bin\D
 E:\student-management\PRN211_SE1506_Group7_StudentManagement\MyStoreWinApp\bin\Debug\net5.0-windows\DataAccess.pdb
 E:\student-management\PRN211_SE1506_Group7_StudentManagement\MyStoreWinApp\obj\Debug\net5.0-windows\MyStoreWinApp.csproj.AssemblyReference.cache
 E:\student-management\PRN211_SE1506_Group7_StudentManagement\MyStoreWinApp\obj\Debug\net5.0-windows\MyStoreWinApp.frmLogin.resources
-E:\student-management\PRN211_SE1506_Group7_StudentManagement\MyStoreWinApp\obj\Debug\net5.0-windows\MyStoreWinApp.frmMain.resources
 E:\student-management\PRN211_SE1506_Group7_StudentManagement\MyStoreWinApp\obj\Debug\net5.0-windows\MyStoreWinApp.frmMark.resources
 E:\student-management\PRN211_SE1506_Group7_StudentManagement\MyStoreWinApp\obj\Debug\net5.0-windows\MyStoreWinApp.frmMarkDetail.resources
 E:\student-management\PRN211_SE1506_Group7_StudentManagement\MyStoreWinApp\obj\Debug\net5.0-windows\MyStoreWinApp.frmStudentDetail.resources
@@ -167,3 +166,5 @@ E:\student-management\PRN211_SE1506_Group7_StudentManagement\MyStoreWinApp\obj\D
 E:\student-management\PRN211_SE1506_Group7_StudentManagement\MyStoreWinApp\obj\Debug\net5.0-windows\ref\MyStoreWinApp.dll
 E:\student-management\PRN211_SE1506_Group7_StudentManagement\MyStoreWinApp\obj\Debug\net5.0-windows\MyStoreWinApp.pdb
 E:\student-management\PRN211_SE1506_Group7_StudentManagement\MyStoreWinApp\obj\Debug\net5.0-windows\MyStoreWinApp.genruntimeconfig.cache
+E:\student-management\PRN211_SE1506_Group7_StudentManagement\MyStoreWinApp\obj\Debug\net5.0-windows\MyStoreWinApp.frmHome.resources
+E:\student-management\PRN211_SE1506_Group7_StudentManagement\MyStoreWinApp\obj\Debug\net5.0-windows\MyStoreWinApp.Properties.Resources.resources

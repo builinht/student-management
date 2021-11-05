@@ -17,7 +17,7 @@ namespace MyStoreWinApp
         StudentRepository studentRepository = new StudentRepository();
         BindingSource source;
         StudentObject student;
-        public frmStudentManagement(StudentObject student)
+        public frmStudentManagement()
         {
             InitializeComponent();
             List<StudentObject> students = new List<StudentObject>();

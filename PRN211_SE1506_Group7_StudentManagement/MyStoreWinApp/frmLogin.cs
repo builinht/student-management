@@ -25,7 +25,7 @@ namespace MyStoreWinApp
             UserObject user = userRepository.GetUsers().SingleOrDefault(pro => pro.UserEmail == txtEmail.Text && pro.UserPassword == txtPassword.Text);
             if (user != null)
             {
-                frmMain frm = new frmMain(user);
+                frmHome frm = new frmHome(user);
                 frm.Show();
 
             }
