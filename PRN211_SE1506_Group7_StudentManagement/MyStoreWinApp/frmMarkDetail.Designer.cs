@@ -1,7 +1,7 @@
 ﻿
 namespace MyStoreWinApp
 {
-    partial class frmMark
+    partial class frmMarkDetail
     {
         /// <summary>
         /// Required designer variable.
@@ -34,23 +34,19 @@ namespace MyStoreWinApp
             this.lbAssignment = new System.Windows.Forms.Label();
             this.lbPractical = new System.Windows.Forms.Label();
             this.lbFinal = new System.Windows.Forms.Label();
-            this.txtCourseID = new System.Windows.Forms.TextBox();
+            this.cboCourseID = new System.Windows.Forms.ComboBox();
             this.txtStudentID = new System.Windows.Forms.TextBox();
             this.txtAssignment = new System.Windows.Forms.TextBox();
             this.txtPractical = new System.Windows.Forms.TextBox();
             this.txtFinal = new System.Windows.Forms.TextBox();
-            this.dgvMark = new System.Windows.Forms.DataGridView();
-            this.btnLoad = new System.Windows.Forms.Button();
-            this.btnAdd = new System.Windows.Forms.Button();
-            this.btnDelete = new System.Windows.Forms.Button();
-            this.btnClose = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvMark)).BeginInit();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lbCourseID
             // 
             this.lbCourseID.AutoSize = true;
-            this.lbCourseID.Location = new System.Drawing.Point(65, 69);
+            this.lbCourseID.Location = new System.Drawing.Point(61, 57);
             this.lbCourseID.Name = "lbCourseID";
             this.lbCourseID.Size = new System.Drawing.Size(69, 20);
             this.lbCourseID.TabIndex = 0;
@@ -59,7 +55,7 @@ namespace MyStoreWinApp
             // lbStudentID
             // 
             this.lbStudentID.AutoSize = true;
-            this.lbStudentID.Location = new System.Drawing.Point(65, 119);
+            this.lbStudentID.Location = new System.Drawing.Point(61, 105);
             this.lbStudentID.Name = "lbStudentID";
             this.lbStudentID.Size = new System.Drawing.Size(75, 20);
             this.lbStudentID.TabIndex = 1;
@@ -68,7 +64,7 @@ namespace MyStoreWinApp
             // lbAssignment
             // 
             this.lbAssignment.AutoSize = true;
-            this.lbAssignment.Location = new System.Drawing.Point(407, 76);
+            this.lbAssignment.Location = new System.Drawing.Point(61, 154);
             this.lbAssignment.Name = "lbAssignment";
             this.lbAssignment.Size = new System.Drawing.Size(86, 20);
             this.lbAssignment.TabIndex = 2;
@@ -77,7 +73,7 @@ namespace MyStoreWinApp
             // lbPractical
             // 
             this.lbPractical.AutoSize = true;
-            this.lbPractical.Location = new System.Drawing.Point(407, 122);
+            this.lbPractical.Location = new System.Drawing.Point(61, 208);
             this.lbPractical.Name = "lbPractical";
             this.lbPractical.Size = new System.Drawing.Size(65, 20);
             this.lbPractical.TabIndex = 3;
@@ -86,124 +82,100 @@ namespace MyStoreWinApp
             // lbFinal
             // 
             this.lbFinal.AutoSize = true;
-            this.lbFinal.Location = new System.Drawing.Point(407, 173);
+            this.lbFinal.Location = new System.Drawing.Point(61, 262);
             this.lbFinal.Name = "lbFinal";
             this.lbFinal.Size = new System.Drawing.Size(40, 20);
             this.lbFinal.TabIndex = 4;
             this.lbFinal.Text = "Final";
             // 
-            // txtCourseID
+            // cboCourseID
             // 
-            this.txtCourseID.Location = new System.Drawing.Point(151, 69);
-            this.txtCourseID.Name = "txtCourseID";
-            this.txtCourseID.Size = new System.Drawing.Size(125, 27);
-            this.txtCourseID.TabIndex = 6;
+            this.cboCourseID.FormattingEnabled = true;
+            this.cboCourseID.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10"});
+            this.cboCourseID.Location = new System.Drawing.Point(184, 57);
+            this.cboCourseID.Name = "cboCourseID";
+            this.cboCourseID.Size = new System.Drawing.Size(151, 28);
+            this.cboCourseID.TabIndex = 5;
             // 
             // txtStudentID
             // 
-            this.txtStudentID.Location = new System.Drawing.Point(151, 119);
+            this.txtStudentID.Location = new System.Drawing.Point(184, 105);
             this.txtStudentID.Name = "txtStudentID";
             this.txtStudentID.Size = new System.Drawing.Size(125, 27);
-            this.txtStudentID.TabIndex = 7;
+            this.txtStudentID.TabIndex = 6;
             // 
             // txtAssignment
             // 
-            this.txtAssignment.Location = new System.Drawing.Point(511, 73);
+            this.txtAssignment.Location = new System.Drawing.Point(184, 154);
             this.txtAssignment.Name = "txtAssignment";
             this.txtAssignment.Size = new System.Drawing.Size(125, 27);
-            this.txtAssignment.TabIndex = 8;
+            this.txtAssignment.TabIndex = 7;
             // 
             // txtPractical
             // 
-            this.txtPractical.Location = new System.Drawing.Point(511, 119);
+            this.txtPractical.Location = new System.Drawing.Point(184, 208);
             this.txtPractical.Name = "txtPractical";
             this.txtPractical.Size = new System.Drawing.Size(125, 27);
-            this.txtPractical.TabIndex = 9;
+            this.txtPractical.TabIndex = 8;
             // 
             // txtFinal
             // 
-            this.txtFinal.Location = new System.Drawing.Point(511, 166);
+            this.txtFinal.Location = new System.Drawing.Point(184, 255);
             this.txtFinal.Name = "txtFinal";
             this.txtFinal.Size = new System.Drawing.Size(125, 27);
-            this.txtFinal.TabIndex = 10;
+            this.txtFinal.TabIndex = 9;
             // 
-            // dgvMark
+            // btnSave
             // 
-            this.dgvMark.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMark.Location = new System.Drawing.Point(37, 277);
-            this.dgvMark.Name = "dgvMark";
-            this.dgvMark.RowHeadersWidth = 51;
-            this.dgvMark.RowTemplate.Height = 29;
-            this.dgvMark.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvMark.Size = new System.Drawing.Size(721, 188);
-            this.dgvMark.TabIndex = 12;
-            this.dgvMark.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMark_CellDoubleClick);
+            this.btnSave.Location = new System.Drawing.Point(61, 328);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(94, 29);
+            this.btnSave.TabIndex = 10;
+            this.btnSave.Text = "Save";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // btnLoad
+            // btnCancel
             // 
-            this.btnLoad.Location = new System.Drawing.Point(65, 223);
-            this.btnLoad.Name = "btnLoad";
-            this.btnLoad.Size = new System.Drawing.Size(94, 29);
-            this.btnLoad.TabIndex = 13;
-            this.btnLoad.Text = "Load";
-            this.btnLoad.UseVisualStyleBackColor = true;
-            this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
+            this.btnCancel.Location = new System.Drawing.Point(270, 328);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(94, 29);
+            this.btnCancel.TabIndex = 11;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
-            // btnAdd
-            // 
-            this.btnAdd.Location = new System.Drawing.Point(266, 223);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(94, 29);
-            this.btnAdd.TabIndex = 14;
-            this.btnAdd.Text = "Add";
-            this.btnAdd.UseVisualStyleBackColor = true;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.Location = new System.Drawing.Point(529, 222);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(94, 29);
-            this.btnDelete.TabIndex = 15;
-            this.btnDelete.Text = "Delete";
-            this.btnDelete.UseVisualStyleBackColor = true;
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
-            // 
-            // btnClose
-            // 
-            this.btnClose.Location = new System.Drawing.Point(343, 489);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(94, 29);
-            this.btnClose.TabIndex = 16;
-            this.btnClose.Text = "Close";
-            this.btnClose.UseVisualStyleBackColor = true;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
-            // frmMark
+            // frmMarkDetail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 540);
-            this.Controls.Add(this.btnClose);
-            this.Controls.Add(this.btnDelete);
-            this.Controls.Add(this.btnAdd);
-            this.Controls.Add(this.btnLoad);
-            this.Controls.Add(this.dgvMark);
+            this.ClientSize = new System.Drawing.Size(438, 399);
+            this.Controls.Add(this.btnCancel);
+            this.Controls.Add(this.btnSave);
             this.Controls.Add(this.txtFinal);
             this.Controls.Add(this.txtPractical);
             this.Controls.Add(this.txtAssignment);
             this.Controls.Add(this.txtStudentID);
-            this.Controls.Add(this.txtCourseID);
+            this.Controls.Add(this.cboCourseID);
             this.Controls.Add(this.lbFinal);
             this.Controls.Add(this.lbPractical);
             this.Controls.Add(this.lbAssignment);
             this.Controls.Add(this.lbStudentID);
             this.Controls.Add(this.lbCourseID);
-            this.Name = "frmMark";
+            this.Name = "frmMarkDetail";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Mark";
-            this.Load += new System.EventHandler(this.frmMark_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvMark)).EndInit();
+            this.Text = "MarkDetail";
+            this.Load += new System.EventHandler(this.frmMarkDetail_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -216,15 +188,12 @@ namespace MyStoreWinApp
         private System.Windows.Forms.Label lbAssignment;
         private System.Windows.Forms.Label lbPractical;
         private System.Windows.Forms.Label lbFinal;
-        private System.Windows.Forms.TextBox txtCourseID;
+        private System.Windows.Forms.ComboBox cboCourseID;
         private System.Windows.Forms.TextBox txtStudentID;
         private System.Windows.Forms.TextBox txtAssignment;
         private System.Windows.Forms.TextBox txtPractical;
         private System.Windows.Forms.TextBox txtFinal;
-        private System.Windows.Forms.DataGridView dgvMark;
-        private System.Windows.Forms.Button btnLoad;
-        private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.Button btnDelete;
-        private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.Button btnCancel;
     }
 }
