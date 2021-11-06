@@ -80,7 +80,7 @@ namespace MyStoreWinApp
 
         private void tsbStudent_Click(object sender, EventArgs e)
         {
-            frmSubject m = new frmSubject();
+            frmStudentManagement m = new frmStudentManagement();
             AddForm(m);
         }
 
