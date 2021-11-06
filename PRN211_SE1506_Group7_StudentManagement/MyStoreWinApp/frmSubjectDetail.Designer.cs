@@ -32,11 +32,11 @@ namespace MyStoreWinApp
             this.lbSubjectID = new System.Windows.Forms.Label();
             this.lbSubjectName = new System.Windows.Forms.Label();
             this.lbMajorID = new System.Windows.Forms.Label();
-            this.cboSubjectID = new System.Windows.Forms.ComboBox();
             this.txtSubjectName = new System.Windows.Forms.TextBox();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.txtMajorID = new System.Windows.Forms.TextBox();
+            this.txtSubjectID = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // lbSubjectID
@@ -65,19 +65,6 @@ namespace MyStoreWinApp
             this.lbMajorID.Size = new System.Drawing.Size(52, 15);
             this.lbMajorID.TabIndex = 2;
             this.lbMajorID.Text = "Major ID";
-            // 
-            // cboSubjectID
-            // 
-            this.cboSubjectID.FormattingEnabled = true;
-            this.cboSubjectID.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4"});
-            this.cboSubjectID.Location = new System.Drawing.Point(168, 31);
-            this.cboSubjectID.Name = "cboSubjectID";
-            this.cboSubjectID.Size = new System.Drawing.Size(121, 23);
-            this.cboSubjectID.TabIndex = 3;
             // 
             // txtSubjectName
             // 
@@ -113,16 +100,23 @@ namespace MyStoreWinApp
             this.txtMajorID.Size = new System.Drawing.Size(100, 23);
             this.txtMajorID.TabIndex = 8;
             // 
+            // txtSubjectID
+            // 
+            this.txtSubjectID.Location = new System.Drawing.Point(168, 31);
+            this.txtSubjectID.Name = "txtSubjectID";
+            this.txtSubjectID.Size = new System.Drawing.Size(100, 23);
+            this.txtSubjectID.TabIndex = 9;
+            // 
             // frmSubjectDetail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(320, 227);
+            this.Controls.Add(this.txtSubjectID);
             this.Controls.Add(this.txtMajorID);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.txtSubjectName);
-            this.Controls.Add(this.cboSubjectID);
             this.Controls.Add(this.lbMajorID);
             this.Controls.Add(this.lbSubjectName);
             this.Controls.Add(this.lbSubjectID);
@@ -140,10 +134,10 @@ namespace MyStoreWinApp
         private System.Windows.Forms.Label lbSubjectID;
         private System.Windows.Forms.Label lbSubjectName;
         private System.Windows.Forms.Label lbMajorID;
-        private System.Windows.Forms.ComboBox cboSubjectID;
         private System.Windows.Forms.TextBox txtSubjectName;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.TextBox txtMajorID;
+        private System.Windows.Forms.TextBox txtSubjectID;
     }
 }
