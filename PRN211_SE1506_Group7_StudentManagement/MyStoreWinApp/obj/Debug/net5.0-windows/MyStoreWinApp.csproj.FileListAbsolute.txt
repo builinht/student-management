@@ -168,11 +168,8 @@ E:\student-management\PRN211_SE1506_Group7_StudentManagement\MyStoreWinApp\obj\D
 E:\student-management\PRN211_SE1506_Group7_StudentManagement\MyStoreWinApp\obj\Debug\net5.0-windows\MyStoreWinApp.genruntimeconfig.cache
 E:\student-management\PRN211_SE1506_Group7_StudentManagement\MyStoreWinApp\obj\Debug\net5.0-windows\MyStoreWinApp.frmHome.resources
 E:\student-management\PRN211_SE1506_Group7_StudentManagement\MyStoreWinApp\obj\Debug\net5.0-windows\MyStoreWinApp.Properties.Resources.resources
-E:\student-management\PRN211_SE1506_Group7_StudentManagement\MyStoreWinApp\obj\Debug\net5.0-windows\MyStoreWinApp.frmMajor.resources
-E:\student-management\PRN211_SE1506_Group7_StudentManagement\MyStoreWinApp\obj\Debug\net5.0-windows\MyStoreWinApp.frmMajorManagement.resources
 E:\student-management\PRN211_SE1506_Group7_StudentManagement\MyStoreWinApp\obj\Debug\net5.0-windows\MyStoreWinApp.frmSubject.resources
 E:\student-management\PRN211_SE1506_Group7_StudentManagement\MyStoreWinApp\obj\Debug\net5.0-windows\MyStoreWinApp.frmSubjectDetail.resources
-E:\student-management\PRN211_SE1506_Group7_StudentManagement\MyStoreWinApp\obj\Debug\net5.0-windows\MyStoreWinApp.csproj.CopyComplete
 C:\Users\PC\Documents\GitHub\student-management\PRN211_SE1506_Group7_StudentManagement\MyStoreWinApp\obj\Debug\net5.0-windows\MyStoreWinApp.csproj.AssemblyReference.cache
 C:\Users\PC\Documents\GitHub\student-management\PRN211_SE1506_Group7_StudentManagement\MyStoreWinApp\obj\Debug\net5.0-windows\SalesWinApp.frmCourseDetail.resources
 C:\Users\PC\Documents\GitHub\student-management\PRN211_SE1506_Group7_StudentManagement\MyStoreWinApp\obj\Debug\net5.0-windows\SalesWinApp.frmCourseManagement.resources
@@ -238,3 +235,7 @@ C:\Users\PC\Documents\GitHub\student-management\PRN211_SE1506_Group7_StudentMana
 C:\Users\PC\Documents\GitHub\student-management\PRN211_SE1506_Group7_StudentManagement\MyStoreWinApp\obj\Debug\net5.0-windows\SalesWinApp.frmMajorManagement.resources
 C:\Users\PC\Documents\GitHub\student-management\PRN211_SE1506_Group7_StudentManagement\MyStoreWinApp\obj\Debug\net5.0-windows\MyStoreWinApp.genruntimeconfig.cache
 C:\Users\PC\Documents\GitHub\student-management\PRN211_SE1506_Group7_StudentManagement\MyStoreWinApp\obj\Debug\net5.0-windows\MyStoreWinApp.csproj.CopyComplete
+E:\student-management\PRN211_SE1506_Group7_StudentManagement\MyStoreWinApp\obj\Debug\net5.0-windows\SalesWinApp.frmCourseDetail.resources
+E:\student-management\PRN211_SE1506_Group7_StudentManagement\MyStoreWinApp\obj\Debug\net5.0-windows\SalesWinApp.frmCourseManagement.resources
+E:\student-management\PRN211_SE1506_Group7_StudentManagement\MyStoreWinApp\obj\Debug\net5.0-windows\SalesWinApp.frmMajor.resources
+E:\student-management\PRN211_SE1506_Group7_StudentManagement\MyStoreWinApp\obj\Debug\net5.0-windows\SalesWinApp.frmMajorManagement.resources

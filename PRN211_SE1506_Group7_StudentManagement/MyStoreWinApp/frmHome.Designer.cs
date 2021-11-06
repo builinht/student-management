@@ -31,6 +31,8 @@ namespace MyStoreWinApp
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmHome));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.tsSubject = new System.Windows.Forms.ToolStrip();
+            this.tsbSubject = new System.Windows.Forms.ToolStripButton();
             this.tsMark = new System.Windows.Forms.ToolStrip();
             this.tsbMark = new System.Windows.Forms.ToolStripButton();
             this.tsCourse = new System.Windows.Forms.ToolStrip();
@@ -54,16 +56,14 @@ namespace MyStoreWinApp
             this.markToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutAppToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsbSubject = new System.Windows.Forms.ToolStripButton();
-            this.tsSubject = new System.Windows.Forms.ToolStrip();
             this.panel1.SuspendLayout();
+            this.tsSubject.SuspendLayout();
             this.tsMark.SuspendLayout();
             this.tsCourse.SuspendLayout();
             this.tsMajor.SuspendLayout();
             this.tsStudent.SuspendLayout();
             this.panel2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
-            this.tsSubject.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -81,6 +81,30 @@ namespace MyStoreWinApp
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(303, 524);
             this.panel1.TabIndex = 0;
+            // 
+            // tsSubject
+            // 
+            this.tsSubject.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.tsSubject.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.tsSubject.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsbSubject});
+            this.tsSubject.Location = new System.Drawing.Point(0, 208);
+            this.tsSubject.Name = "tsSubject";
+            this.tsSubject.Size = new System.Drawing.Size(303, 52);
+            this.tsSubject.TabIndex = 6;
+            this.tsSubject.Text = "toolStrip1";
+            // 
+            // tsbSubject
+            // 
+            this.tsbSubject.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.tsbSubject.Font = new System.Drawing.Font("Segoe UI Semibold", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.tsbSubject.Image = ((System.Drawing.Image)(resources.GetObject("tsbSubject.Image")));
+            this.tsbSubject.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbSubject.Margin = new System.Windows.Forms.Padding(60, 1, 0, 2);
+            this.tsbSubject.Name = "tsbSubject";
+            this.tsbSubject.Size = new System.Drawing.Size(170, 49);
+            this.tsbSubject.Text = "Subjects";
+            this.tsbSubject.Click += new System.EventHandler(this.tsbSubject_Click);
             // 
             // tsMark
             // 
@@ -104,6 +128,7 @@ namespace MyStoreWinApp
             this.tsbMark.Name = "tsbMark";
             this.tsbMark.Size = new System.Drawing.Size(121, 49);
             this.tsbMark.Text = "Mark";
+            this.tsbMark.Click += new System.EventHandler(this.tsbMark_Click);
             // 
             // tsCourse
             // 
@@ -127,6 +152,7 @@ namespace MyStoreWinApp
             this.tsbCourse.Name = "tsbCourse";
             this.tsbCourse.Size = new System.Drawing.Size(162, 49);
             this.tsbCourse.Text = "Courses";
+            this.tsbCourse.Click += new System.EventHandler(this.tsbCourse_Click);
             // 
             // tsMajor
             // 
@@ -151,6 +177,7 @@ namespace MyStoreWinApp
             this.tsbMajor.Name = "tsbMajor";
             this.tsbMajor.Size = new System.Drawing.Size(147, 49);
             this.tsbMajor.Text = "Majors";
+            this.tsbMajor.Click += new System.EventHandler(this.tsbMajor_Click);
             // 
             // tsStudent
             // 
@@ -175,6 +202,7 @@ namespace MyStoreWinApp
             this.tsbStudent.Name = "tsbStudent";
             this.tsbStudent.Size = new System.Drawing.Size(175, 49);
             this.tsbStudent.Text = "Students";
+            this.tsbStudent.Click += new System.EventHandler(this.tsbStudent_Click);
             // 
             // panel3
             // 
@@ -237,14 +265,14 @@ namespace MyStoreWinApp
             // logoutToolStripMenuItem
             // 
             this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
-            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(224, 36);
+            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(174, 36);
             this.logoutToolStripMenuItem.Text = "Logout";
             this.logoutToolStripMenuItem.Click += new System.EventHandler(this.logoutToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(224, 36);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(174, 36);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -273,18 +301,21 @@ namespace MyStoreWinApp
             this.majorsToolStripMenuItem.Name = "majorsToolStripMenuItem";
             this.majorsToolStripMenuItem.Size = new System.Drawing.Size(224, 36);
             this.majorsToolStripMenuItem.Text = "Majors";
+            this.majorsToolStripMenuItem.Click += new System.EventHandler(this.majorsToolStripMenuItem_Click);
             // 
             // subjectsToolStripMenuItem
             // 
             this.subjectsToolStripMenuItem.Name = "subjectsToolStripMenuItem";
             this.subjectsToolStripMenuItem.Size = new System.Drawing.Size(224, 36);
             this.subjectsToolStripMenuItem.Text = "Subjects";
+            this.subjectsToolStripMenuItem.Click += new System.EventHandler(this.subjectsToolStripMenuItem_Click);
             // 
             // coursesToolStripMenuItem
             // 
             this.coursesToolStripMenuItem.Name = "coursesToolStripMenuItem";
             this.coursesToolStripMenuItem.Size = new System.Drawing.Size(224, 36);
             this.coursesToolStripMenuItem.Text = "Courses";
+            this.coursesToolStripMenuItem.Click += new System.EventHandler(this.coursesToolStripMenuItem_Click);
             // 
             // markToolStripMenuItem
             // 
@@ -308,29 +339,6 @@ namespace MyStoreWinApp
             this.aboutAppToolStripMenuItem.Size = new System.Drawing.Size(211, 36);
             this.aboutAppToolStripMenuItem.Text = "About app";
             // 
-            // tsbSubject
-            // 
-            this.tsbSubject.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.tsbSubject.Font = new System.Drawing.Font("Segoe UI Semibold", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.tsbSubject.Image = ((System.Drawing.Image)(resources.GetObject("tsbSubject.Image")));
-            this.tsbSubject.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbSubject.Margin = new System.Windows.Forms.Padding(60, 1, 0, 2);
-            this.tsbSubject.Name = "tsbSubject";
-            this.tsbSubject.Size = new System.Drawing.Size(173, 50);
-            this.tsbSubject.Text = "Subjects";
-            // 
-            // tsSubject
-            // 
-            this.tsSubject.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.tsSubject.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.tsSubject.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsbSubject});
-            this.tsSubject.Location = new System.Drawing.Point(0, 208);
-            this.tsSubject.Name = "tsSubject";
-            this.tsSubject.Size = new System.Drawing.Size(303, 53);
-            this.tsSubject.TabIndex = 6;
-            this.tsSubject.Text = "toolStrip1";
-            // 
             // frmHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -346,6 +354,8 @@ namespace MyStoreWinApp
             this.Text = "Home";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.tsSubject.ResumeLayout(false);
+            this.tsSubject.PerformLayout();
             this.tsMark.ResumeLayout(false);
             this.tsMark.PerformLayout();
             this.tsCourse.ResumeLayout(false);
@@ -358,8 +368,6 @@ namespace MyStoreWinApp
             this.panel2.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            this.tsSubject.ResumeLayout(false);
-            this.tsSubject.PerformLayout();
             this.ResumeLayout(false);
 
         }
