@@ -42,7 +42,7 @@ namespace DataAccess
                     majors.Add(new MajorObject
                     {
                         MajorId = dataReader.GetString(0),
-                        NameMajor = dataReader.GetString(2),
+                        NameMajor = dataReader.GetString(1),
                     }
                     );
                 }
