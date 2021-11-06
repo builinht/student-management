@@ -66,5 +66,42 @@ namespace MyStoreWinApp
             SubjectObject subject = (SubjectObject)dgvSubjectList.CurrentRow.DataBoundItem;
             return subject;
         }
+
+        private void frmSubject_Load(object sender, EventArgs e)
+        {
+            btnDeleteSub.Enabled = false;
+            btnNewSub.Enabled = false;
+        }
+
+        private void dgvSubjectList_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            frmSubjectDetail frm = new frmSubjectDetail
+            {
+                Text = "Update subject",
+                InsertOrUpdate = true,
+                SubjectInfo = GetSubjectObject(),
+                SubjectRepository = subjectRepository
+            };
+            if (frm.ShowDialog() == DialogResult.OK)
+            { 
+                LoadSubjectList();
+                source.Position = source.Count - 1;
+            }
+        }
+
+        private void btnNewSub_Click(object sender, EventArgs e)
+        {
+            frmSubjectDetail frm = new frmSubjectDetail
+            {
+                Text = "Add Subject",
+                InsertOrUpdate = false,
+                SubjectRepository = subjectRepository
+            };
+            if (frm.ShowDialog() == DialogResult.OK)
+            {
+                LoadSubjectList();
+                source.Position = source.Count - 1;
+            }
+        }
     }
 }
