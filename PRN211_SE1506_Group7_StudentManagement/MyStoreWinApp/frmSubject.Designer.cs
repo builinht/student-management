@@ -99,6 +99,7 @@ namespace MyStoreWinApp
             this.dgvSubjectList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullColumnSelect;
             this.dgvSubjectList.Size = new System.Drawing.Size(636, 203);
             this.dgvSubjectList.TabIndex = 6;
+            this.dgvSubjectList.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSubjectList_CellDoubleClick);
             // 
             // btnNewSub
             // 
@@ -108,6 +109,7 @@ namespace MyStoreWinApp
             this.btnNewSub.TabIndex = 7;
             this.btnNewSub.Text = "New";
             this.btnNewSub.UseVisualStyleBackColor = true;
+            this.btnNewSub.Click += new System.EventHandler(this.btnNewSub_Click);
             // 
             // btnLoadSub
             // 
@@ -147,6 +149,7 @@ namespace MyStoreWinApp
             this.Name = "frmSubject";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Subject";
+            this.Load += new System.EventHandler(this.frmSubject_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvSubjectList)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
