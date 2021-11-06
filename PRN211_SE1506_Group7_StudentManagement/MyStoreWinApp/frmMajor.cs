@@ -1,5 +1,6 @@
 ﻿using BusinessObject;
 using DataAccess.Repository;
+
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -10,11 +11,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace MyStoreWinApp
+namespace SalesWinApp
 {
     public partial class frmMajor : Form
     {
-        public IMajorRepository MajorRepository { get; set; }
+        public IMajorRepository tblMajorRepository { get; set; }
         public bool InsertOrUpdate { get; set; }
         public MajorObject MajorInfo { get; set; }
         public frmMajor()
@@ -22,9 +23,21 @@ namespace MyStoreWinApp
             InitializeComponent();
         }
 
+        private void frmMajor_Load(object sender, EventArgs e)
+        {
+            cboMajorID.Enabled = !InsertOrUpdate;
+            if (InsertOrUpdate == true)
+            {
+                cboMajorID.Text = MajorInfo.MajorId.ToString();
+                cboMajorName.Text = MajorInfo.NameMajor.ToString();
+                
+            }
+        }
+
         private void btnSave_Click(object sender, EventArgs e)
         {
-            if (cboMajorID.Text.Equals("") || cboMajorName.Text.Equals(""))
+            var eugu = cboMajorID;
+            if (cboMajorID.Text.Equals("") || cboMajorName.Text.Equals("") )
             {
                 MessageBox.Show("Missing input !", "Error");
             }
@@ -34,17 +47,18 @@ namespace MyStoreWinApp
                 {
                     var majors = new MajorObject
                     {
+                        
                         MajorId = cboMajorID.Text,
                         NameMajor = cboMajorName.Text
 
                     };
                     if (InsertOrUpdate == false)
                     {
-                        MajorRepository.InserttblMajor(majors);
+                        tblMajorRepository.InserttblMajor(majors);
                     }
                     else
                     {
-                        MajorRepository.UpdatetblMajor(majors);
+                        tblMajorRepository.UpdatetblMajor(majors);
                     }
                     this.DialogResult = DialogResult.OK;
                     Close();
@@ -55,16 +69,7 @@ namespace MyStoreWinApp
                 }
             }
         }
-        private void btnCancel_Click(object sender, EventArgs e) => Close();
 
-        private void frmMajor_Load(object sender, EventArgs e)
-        {
-            cboMajorID.Enabled = !InsertOrUpdate;
-            if (InsertOrUpdate == true)
-            {
-                cboMajorID.Text = MajorInfo.MajorId.ToString();
-                cboMajorName.Text = MajorInfo.NameMajor.ToString();
-            }
-        }
+        private void btnCancel_Click(object sender, EventArgs e) => Close();
     }
 }

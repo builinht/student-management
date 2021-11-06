@@ -1,5 +1,6 @@
 ﻿using BusinessObject;
 using DataAccess.Repository;
+
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -10,17 +11,23 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace MyStoreWinApp
+namespace SalesWinApp
 {
     public partial class frmMajorManagement : Form
-    {
+    {   
         MajorRepository majorRepository = new MajorRepository();
         BindingSource source;
+        
+        
+        
+        
+
+        
         public frmMajorManagement()
         {
             InitializeComponent();
         }
-
+       
         private void frmMajorManagement_Load(object sender, EventArgs e)
         {
             btnAdd.Enabled = false;
@@ -32,10 +39,10 @@ namespace MyStoreWinApp
             List<MajorObject> majors = new List<MajorObject>();
             majors = (List<MajorObject>)majorRepository.GettblMajors();
             try
-            {
+            {   
                 source = new BindingSource();
                 source.DataSource = majors;
-
+                
                 dgvMajorList.DataSource = null;
                 dgvMajorList.DataSource = source;
             }
@@ -45,32 +52,31 @@ namespace MyStoreWinApp
             }
         }
 
-        private void btnLoad_Click(object sender, EventArgs e)
+        private void BtnLoad_Click(object sender, EventArgs e)
         {
             LoadMajorList();
             btnAdd.Enabled = true;
             btnDelete.Enabled = true;
         }
-
         private MajorObject GettblMajor()
         {
             MajorObject majors = (MajorObject)dgvMajorList.CurrentRow.DataBoundItem;
             return majors;
         }
 
-        private void dgvMajorList_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             frmMajor frm = new frmMajor
             {
                 Text = "Update Major",
                 InsertOrUpdate = true,
                 MajorInfo = GettblMajor(),
-                MajorRepository = majorRepository
+                tblMajorRepository = majorRepository
             };
             if (frm.ShowDialog() == DialogResult.OK)
             {
                 LoadMajorList();
-                source.Position = source.Count - 1;
+                source.Position = source.Count - 1; 
             }
         }
 
@@ -81,14 +87,16 @@ namespace MyStoreWinApp
                 Text = "Add Major",
                 InsertOrUpdate = false,
                 MajorInfo = GettblMajor(),
-                MajorRepository = majorRepository
+                tblMajorRepository = majorRepository
             };
+            
             if (frm.ShowDialog() == DialogResult.OK)
             {
                 LoadMajorList();
                 source.Position = source.Count - 1;
             }
             frm.Show();
+
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -104,6 +112,39 @@ namespace MyStoreWinApp
                 MessageBox.Show(ex.Message, "Delete Major");
             }
         }
+        private MajorObject GetTblMajor()
+        {
+            MajorObject major = null;
+            try
+            {
+                major = new MajorObject
+                {
+                //    SubjectID = cboMajorID.Text,
+                  //  MajorId = cboMajorID.Text,
+                   // NameMajor = cboMajorName.Text,
+                    
+                };
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Get Major");
+            }
+            return major;
+        }
+        private void frmMajor_Load(object sender, EventArgs e)
+        {
+     
+            LoadMajorList();
+        }
+        private void btnLoad_Click(object sender, EventArgs e)
+        {
+            LoadMajorList();
+        }
+         private void ClearText()
+        {
+            
+        }
+
 
         private void btnSearch_Click(object sender, EventArgs e)
         {

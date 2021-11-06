@@ -1,6 +1,7 @@
 using BusinessObject;
 using DataAccess.Repository;
 using Microsoft.Extensions.Configuration;
+using SalesWinApp;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -32,7 +33,7 @@ namespace MyStoreWinApp
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmLogin());
+            Application.Run(new frmMajorManagement());
         }
     }
 }

@@ -1,5 +1,5 @@
 ﻿
-namespace MyStoreWinApp
+namespace SalesWinApp
 {
     partial class frmMajor
     {
@@ -29,65 +29,52 @@ namespace MyStoreWinApp
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.btnSave = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
-            this.cboMajorID = new System.Windows.Forms.ComboBox();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.cboMajorName = new System.Windows.Forms.ComboBox();
+            this.cboMajorID = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(86, 81);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(67, 20);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Major ID";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(77, 160);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(92, 20);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Major Name";
-            // 
-            // btnSave
-            // 
-            this.btnSave.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.btnSave.Location = new System.Drawing.Point(86, 243);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(94, 29);
-            this.btnSave.TabIndex = 3;
-            this.btnSave.Text = "Save";
-            this.btnSave.UseVisualStyleBackColor = true;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnCancel
             // 
-            this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCancel.Location = new System.Drawing.Point(249, 243);
+            this.btnCancel.Location = new System.Drawing.Point(473, 289);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(94, 29);
-            this.btnCancel.TabIndex = 4;
+            this.btnCancel.Size = new System.Drawing.Size(94, 41);
+            this.btnCancel.TabIndex = 15;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
-            // cboMajorID
+            // btnSave
             // 
-            this.cboMajorID.FormattingEnabled = true;
-            this.cboMajorID.Items.AddRange(new object[] {
-            "SS",
-            "SE",
-            "AI"});
-            this.cboMajorID.Location = new System.Drawing.Point(192, 81);
-            this.cboMajorID.Name = "cboMajorID";
-            this.cboMajorID.Size = new System.Drawing.Size(151, 28);
-            this.cboMajorID.TabIndex = 5;
+            this.btnSave.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.btnSave.Location = new System.Drawing.Point(254, 289);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(94, 41);
+            this.btnSave.TabIndex = 14;
+            this.btnSave.Text = "Save";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(60, 199);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(92, 20);
+            this.label2.TabIndex = 13;
+            this.label2.Text = "Major Name";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(60, 103);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(67, 20);
+            this.label3.TabIndex = 12;
+            this.label3.Text = "Major ID";
             // 
             // cboMajorName
             // 
@@ -96,24 +83,35 @@ namespace MyStoreWinApp
             "Information Technology",
             "Business Object",
             "Artificial Intelligence"});
-            this.cboMajorName.Location = new System.Drawing.Point(192, 160);
+            this.cboMajorName.Location = new System.Drawing.Point(254, 196);
             this.cboMajorName.Name = "cboMajorName";
-            this.cboMajorName.Size = new System.Drawing.Size(151, 28);
-            this.cboMajorName.TabIndex = 7;
+            this.cboMajorName.Size = new System.Drawing.Size(313, 28);
+            this.cboMajorName.TabIndex = 11;
+            // 
+            // cboMajorID
+            // 
+            this.cboMajorID.FormattingEnabled = true;
+            this.cboMajorID.Items.AddRange(new object[] {
+            "SS",
+            "SE",
+            "AI"});
+            this.cboMajorID.Location = new System.Drawing.Point(254, 95);
+            this.cboMajorID.Name = "cboMajorID";
+            this.cboMajorID.Size = new System.Drawing.Size(313, 28);
+            this.cboMajorID.TabIndex = 10;
             // 
             // frmMajor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(455, 349);
-            this.Controls.Add(this.cboMajorName);
-            this.Controls.Add(this.cboMajorID);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnSave);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.cboMajorName);
+            this.Controls.Add(this.cboMajorID);
             this.Name = "frmMajor";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmMajor";
             this.Load += new System.EventHandler(this.frmMajor_Load);
             this.ResumeLayout(false);
@@ -122,12 +120,11 @@ namespace MyStoreWinApp
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnCancel;
-        private System.Windows.Forms.ComboBox cboMajorID;
+        private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox cboMajorName;
+        private System.Windows.Forms.ComboBox cboMajorID;
     }
 }
