@@ -25,7 +25,7 @@ namespace MyStoreWinApp
 
         private void frmSubjectDetail_Load(object sender, EventArgs e)
         {
-            cboSubjectID.Enabled = !InsertOrUpdate;
+            txtSubjectID.Enabled = !InsertOrUpdate;
             if (InsertOrUpdate == true)
             {
                 txtSubjectName.Text = SubjectInfo.SubjectName.ToString();
