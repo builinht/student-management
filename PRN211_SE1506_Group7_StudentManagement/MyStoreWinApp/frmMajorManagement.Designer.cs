@@ -108,6 +108,7 @@ namespace SalesWinApp
             this.Controls.Add(this.btnLoad);
             this.Controls.Add(this.dgvMajorList);
             this.Name = "frmMajorManagement";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmMajorManagement";
             ((System.ComponentModel.ISupportInitialize)(this.dgvMajorList)).EndInit();
             this.ResumeLayout(false);

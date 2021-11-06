@@ -42,42 +42,45 @@ namespace MyStoreWinApp
             // lbSubjectID
             // 
             this.lbSubjectID.AutoSize = true;
-            this.lbSubjectID.Location = new System.Drawing.Point(61, 34);
+            this.lbSubjectID.Location = new System.Drawing.Point(70, 45);
             this.lbSubjectID.Name = "lbSubjectID";
-            this.lbSubjectID.Size = new System.Drawing.Size(60, 15);
+            this.lbSubjectID.Size = new System.Drawing.Size(77, 20);
             this.lbSubjectID.TabIndex = 0;
             this.lbSubjectID.Text = "Subject ID";
             // 
             // lbSubjectName
             // 
             this.lbSubjectName.AutoSize = true;
-            this.lbSubjectName.Location = new System.Drawing.Point(61, 70);
+            this.lbSubjectName.Location = new System.Drawing.Point(70, 93);
             this.lbSubjectName.Name = "lbSubjectName";
-            this.lbSubjectName.Size = new System.Drawing.Size(81, 15);
+            this.lbSubjectName.Size = new System.Drawing.Size(102, 20);
             this.lbSubjectName.TabIndex = 1;
             this.lbSubjectName.Text = "Subject Name";
             // 
             // lbMajorID
             // 
             this.lbMajorID.AutoSize = true;
-            this.lbMajorID.Location = new System.Drawing.Point(61, 110);
+            this.lbMajorID.Location = new System.Drawing.Point(70, 147);
             this.lbMajorID.Name = "lbMajorID";
-            this.lbMajorID.Size = new System.Drawing.Size(52, 15);
+            this.lbMajorID.Size = new System.Drawing.Size(67, 20);
             this.lbMajorID.TabIndex = 2;
             this.lbMajorID.Text = "Major ID";
             // 
             // txtSubjectName
             // 
-            this.txtSubjectName.Location = new System.Drawing.Point(168, 67);
+            this.txtSubjectName.Location = new System.Drawing.Point(192, 89);
+            this.txtSubjectName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSubjectName.Name = "txtSubjectName";
-            this.txtSubjectName.Size = new System.Drawing.Size(100, 23);
+            this.txtSubjectName.Size = new System.Drawing.Size(114, 27);
             this.txtSubjectName.TabIndex = 5;
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(70, 155);
+            this.btnSave.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.btnSave.Location = new System.Drawing.Point(80, 207);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(75, 23);
+            this.btnSave.Size = new System.Drawing.Size(86, 31);
             this.btnSave.TabIndex = 6;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
@@ -85,9 +88,11 @@ namespace MyStoreWinApp
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(202, 154);
+            this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnCancel.Location = new System.Drawing.Point(231, 205);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(75, 23);
+            this.btnCancel.Size = new System.Drawing.Size(86, 31);
             this.btnCancel.TabIndex = 7;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
@@ -95,23 +100,25 @@ namespace MyStoreWinApp
             // 
             // txtMajorID
             // 
-            this.txtMajorID.Location = new System.Drawing.Point(168, 107);
+            this.txtMajorID.Location = new System.Drawing.Point(192, 143);
+            this.txtMajorID.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtMajorID.Name = "txtMajorID";
-            this.txtMajorID.Size = new System.Drawing.Size(100, 23);
+            this.txtMajorID.Size = new System.Drawing.Size(114, 27);
             this.txtMajorID.TabIndex = 8;
             // 
             // txtSubjectID
             // 
-            this.txtSubjectID.Location = new System.Drawing.Point(168, 31);
+            this.txtSubjectID.Location = new System.Drawing.Point(192, 41);
+            this.txtSubjectID.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSubjectID.Name = "txtSubjectID";
-            this.txtSubjectID.Size = new System.Drawing.Size(100, 23);
+            this.txtSubjectID.Size = new System.Drawing.Size(114, 27);
             this.txtSubjectID.TabIndex = 9;
             // 
             // frmSubjectDetail
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(320, 227);
+            this.ClientSize = new System.Drawing.Size(366, 303);
             this.Controls.Add(this.txtSubjectID);
             this.Controls.Add(this.txtMajorID);
             this.Controls.Add(this.btnCancel);
@@ -120,6 +127,7 @@ namespace MyStoreWinApp
             this.Controls.Add(this.lbMajorID);
             this.Controls.Add(this.lbSubjectName);
             this.Controls.Add(this.lbSubjectID);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmSubjectDetail";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Subject Detail";

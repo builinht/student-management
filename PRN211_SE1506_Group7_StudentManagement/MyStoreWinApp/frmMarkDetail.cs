@@ -7,6 +7,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -27,24 +28,52 @@ namespace MyStoreWinApp
         {
             try
             {
-                var mark = new MarkObject
+                if (txtAssignment.Text.Equals("") ||
+                    txtFinal.Text.Equals("") ||
+                    txtPractical.Text.Equals("") ||
+                    txtStudentID.Text.Equals(""))
                 {
-                    courseID = int.Parse(cboCourseID.Text),
-                    studentID = txtStudentID.Text,
-                    Assignment = double.Parse(txtAssignment.Text),
-                    Practical = double.Parse(txtPractical.Text),
-                    Final = double.Parse(txtFinal.Text)
-                };
-                if(InsertOrUpdate == false)
+                    MessageBox.Show("Missing input !", "Error");
+                }
+                else if (!Regex.Match(txtAssignment.Text, "^([0-9]|10)$").Success)
                 {
-                    MarkRepository.InsertMark(mark);
+                    MessageBox.Show("Invalid assignment grade", "Message");
+                    txtAssignment.Focus();
+                    return;
+                }
+                else if (!Regex.Match(txtFinal.Text, "^([0-9]|10)$").Success)
+                {
+                    MessageBox.Show("Invalid final grade", "Message");
+                    txtFinal.Focus();
+                    return;
+                }
+                else if (!Regex.Match(txtPractical.Text, "^([0-9]|10)$").Success)
+                {
+                    MessageBox.Show("Invalid practical grade", "Message");
+                    txtPractical.Focus();
+                    return;
                 }
                 else
                 {
-                    MarkRepository.UpdateMark(mark);
+                    var mark = new MarkObject
+                    {
+                        courseID = int.Parse(cboCourseID.Text),
+                        studentID = txtStudentID.Text,
+                        Assignment = double.Parse(txtAssignment.Text),
+                        Practical = double.Parse(txtPractical.Text),
+                        Final = double.Parse(txtFinal.Text)
+                    };
+                    if (InsertOrUpdate == false)
+                    {
+                        MarkRepository.InsertMark(mark);
+                    }
+                    else
+                    {
+                        MarkRepository.UpdateMark(mark);
+                    }
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, InsertOrUpdate == false ? "Add new mark" : "Update mark");
             }
