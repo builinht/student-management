@@ -107,6 +107,7 @@ namespace SalesWinApp
             this.Controls.Add(this.dgvCourseList);
             this.Controls.Add(this.txtSearch);
             this.Name = "frmCourseManagement";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmCourseManagement";
             ((System.ComponentModel.ISupportInitialize)(this.dgvCourseList)).EndInit();
             this.ResumeLayout(false);

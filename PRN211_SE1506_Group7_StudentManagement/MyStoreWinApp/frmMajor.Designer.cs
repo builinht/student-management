@@ -83,7 +83,7 @@ namespace SalesWinApp
             this.cboMajorName.Items.AddRange(new object[] {
             "Information Technology",
             "Business Object",
-            "Artificial Intelligence"});
+            "English Language"});
             this.cboMajorName.Location = new System.Drawing.Point(254, 196);
             this.cboMajorName.Name = "cboMajorName";
             this.cboMajorName.Size = new System.Drawing.Size(313, 28);
@@ -95,7 +95,7 @@ namespace SalesWinApp
             this.cboMajorID.Items.AddRange(new object[] {
             "SS",
             "SE",
-            "AI"});
+            "SA"});
             this.cboMajorID.Location = new System.Drawing.Point(254, 95);
             this.cboMajorID.Name = "cboMajorID";
             this.cboMajorID.Size = new System.Drawing.Size(313, 28);
@@ -113,6 +113,7 @@ namespace SalesWinApp
             this.Controls.Add(this.cboMajorName);
             this.Controls.Add(this.cboMajorID);
             this.Name = "frmMajor";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmMajor";
             this.Load += new System.EventHandler(this.frmMajor_Load);
             this.ResumeLayout(false);

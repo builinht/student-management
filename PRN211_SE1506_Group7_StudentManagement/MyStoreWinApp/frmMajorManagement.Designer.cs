@@ -41,11 +41,11 @@ namespace SalesWinApp
             // dgvMajorList
             // 
             this.dgvMajorList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMajorList.Location = new System.Drawing.Point(12, 250);
+            this.dgvMajorList.Location = new System.Drawing.Point(37, 235);
             this.dgvMajorList.Name = "dgvMajorList";
             this.dgvMajorList.RowHeadersWidth = 51;
             this.dgvMajorList.RowTemplate.Height = 29;
-            this.dgvMajorList.Size = new System.Drawing.Size(776, 188);
+            this.dgvMajorList.Size = new System.Drawing.Size(435, 188);
             this.dgvMajorList.TabIndex = 0;
             this.dgvMajorList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -71,7 +71,7 @@ namespace SalesWinApp
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(274, 62);
+            this.btnDelete.Location = new System.Drawing.Point(191, 62);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(94, 29);
             this.btnDelete.TabIndex = 3;
@@ -81,7 +81,7 @@ namespace SalesWinApp
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(274, 159);
+            this.btnSearch.Location = new System.Drawing.Point(191, 159);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(94, 29);
             this.btnSearch.TabIndex = 4;
@@ -91,16 +91,16 @@ namespace SalesWinApp
             // 
             // txtSearch
             // 
-            this.txtSearch.Location = new System.Drawing.Point(410, 161);
+            this.txtSearch.Location = new System.Drawing.Point(305, 159);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(305, 27);
+            this.txtSearch.Size = new System.Drawing.Size(142, 27);
             this.txtSearch.TabIndex = 5;
             // 
             // frmMajorManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(499, 450);
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.btnDelete);

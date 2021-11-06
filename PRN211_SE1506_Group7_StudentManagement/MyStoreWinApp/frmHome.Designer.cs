@@ -292,35 +292,35 @@ namespace MyStoreWinApp
             // studentsToolStripMenuItem
             // 
             this.studentsToolStripMenuItem.Name = "studentsToolStripMenuItem";
-            this.studentsToolStripMenuItem.Size = new System.Drawing.Size(224, 36);
+            this.studentsToolStripMenuItem.Size = new System.Drawing.Size(191, 36);
             this.studentsToolStripMenuItem.Text = "Students";
             this.studentsToolStripMenuItem.Click += new System.EventHandler(this.studentsToolStripMenuItem_Click);
             // 
             // majorsToolStripMenuItem
             // 
             this.majorsToolStripMenuItem.Name = "majorsToolStripMenuItem";
-            this.majorsToolStripMenuItem.Size = new System.Drawing.Size(224, 36);
+            this.majorsToolStripMenuItem.Size = new System.Drawing.Size(191, 36);
             this.majorsToolStripMenuItem.Text = "Majors";
             this.majorsToolStripMenuItem.Click += new System.EventHandler(this.majorsToolStripMenuItem_Click);
             // 
             // subjectsToolStripMenuItem
             // 
             this.subjectsToolStripMenuItem.Name = "subjectsToolStripMenuItem";
-            this.subjectsToolStripMenuItem.Size = new System.Drawing.Size(224, 36);
+            this.subjectsToolStripMenuItem.Size = new System.Drawing.Size(191, 36);
             this.subjectsToolStripMenuItem.Text = "Subjects";
             this.subjectsToolStripMenuItem.Click += new System.EventHandler(this.subjectsToolStripMenuItem_Click);
             // 
             // coursesToolStripMenuItem
             // 
             this.coursesToolStripMenuItem.Name = "coursesToolStripMenuItem";
-            this.coursesToolStripMenuItem.Size = new System.Drawing.Size(224, 36);
+            this.coursesToolStripMenuItem.Size = new System.Drawing.Size(191, 36);
             this.coursesToolStripMenuItem.Text = "Courses";
             this.coursesToolStripMenuItem.Click += new System.EventHandler(this.coursesToolStripMenuItem_Click);
             // 
             // markToolStripMenuItem
             // 
             this.markToolStripMenuItem.Name = "markToolStripMenuItem";
-            this.markToolStripMenuItem.Size = new System.Drawing.Size(224, 36);
+            this.markToolStripMenuItem.Size = new System.Drawing.Size(191, 36);
             this.markToolStripMenuItem.Text = "Mark";
             this.markToolStripMenuItem.Click += new System.EventHandler(this.markToolStripMenuItem_Click);
             // 
