@@ -34,14 +34,41 @@ namespace MyStoreWinApp
             {
                 source = new BindingSource();
                 source.DataSource = subject;
+
+                txtSubjectID.DataBindings.Clear();
+                txtSubjectName.DataBindings.Clear();
+                txtMajorID.DataBindings.Clear();
+
+                txtSubjectID.DataBindings.Add("Text", source, "subjectID");
+                txtSubjectName.DataBindings.Add("Text", source, "subjectName");
+                txtMajorID.DataBindings.Add("Text", source, "major");
+
                 dgvSubjectList.DataSource = null;
                 dgvSubjectList.DataSource = source;
+
+                if (subjects.Count() == 0)
+                {
+                    ClearText();
+                    btnDeleteSub.Enabled = false;
+                }
+                else
+                {
+                    btnDeleteSub.Enabled = true;
+                }
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Load subject");
             }
         }
+
+        private void ClearText()
+        {
+            txtSubjectID.Text = string.Empty;
+            txtSubjectName.Text = string.Empty;
+            txtMajorID.Text = string.Empty;
+        }
+
 
         private void btnLoadSub_Click(object sender, EventArgs e)
         {
@@ -71,6 +98,7 @@ namespace MyStoreWinApp
         {
             btnDeleteSub.Enabled = false;
             btnNewSub.Enabled = false;
+            dgvSubjectList.CellDoubleClick += dgvSubjectList_CellDoubleClick;
         }
 
         private void dgvSubjectList_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -83,7 +111,7 @@ namespace MyStoreWinApp
                 SubjectRepository = subjectRepository
             };
             if (frm.ShowDialog() == DialogResult.OK)
-            { 
+            {
                 LoadSubjectList();
                 source.Position = source.Count - 1;
             }

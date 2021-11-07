@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace DataAccess
 {
-    public class SubjectDAO :BaseDAL
+    public class SubjectDAO : BaseDAL
     {
         private static SubjectDAO instance = null;
         private static readonly object instanceLock = new object();
@@ -22,7 +22,7 @@ namespace DataAccess
             {
                 lock (instanceLock)
                 {
-                    if(instance == null)
+                    if (instance == null)
                     {
                         instance = new SubjectDAO();
                     }
@@ -34,7 +34,7 @@ namespace DataAccess
         public IEnumerable<SubjectObject> GetSubjectsList()
         {
             IDataReader dataReader = null;
-            string SQLSelect = "Select SubjectID, SubjectName, MajorID from Subject";
+            string SQLSelect = "Select subjectID, subjectName, sajorID from tblSubject";
             var subjects = new List<SubjectObject>();
             try
             {
@@ -64,10 +64,10 @@ namespace DataAccess
         {
             SubjectObject subject = null;
             IDataReader dataReader = null;
-            string SQLSelect = "Select SubjectName, MajorID from Subject where SubjectID = @SubjectID";
+            string SQLSelect = "Select subjectName, majorID from tblSubject where subjectID = @subjectID";
             try
             {
-                var param = dataProvider.CreateParameter("@SubjectID", 20, subjectID, DbType.String);
+                var param = dataProvider.CreateParameter("@subjectID", 20, subjectID, DbType.String);
                 dataReader = dataProvider.GetDataReader(SQLSelect, CommandType.Text, out connection, param);
                 if (dataReader.Read())
                 {
@@ -96,13 +96,13 @@ namespace DataAccess
             try
             {
                 SubjectObject pro = GetSubjectByID(subject.SubjectID);
-                if(pro == null)
+                if (pro == null)
                 {
-                    string SQLInsert = "Insert Subject values(@SubjectID,@SubjectName,@MajorID)";
+                    string SQLInsert = "Insert tblSubject values(@subjectID,@subjectName,@majorID)";
                     var parameters = new List<SqlParameter>();
-                    parameters.Add(dataProvider.CreateParameter("@SubjectID", 20, subject.SubjectID, DbType.String));
-                    parameters.Add(dataProvider.CreateParameter("@SubjectName", 20, subject.SubjectName, DbType.String));
-                    parameters.Add(dataProvider.CreateParameter("@MajorID", 20, subject.MajorID, DbType.String));
+                    parameters.Add(dataProvider.CreateParameter("@subjectID", 20, subject.SubjectID, DbType.String));
+                    parameters.Add(dataProvider.CreateParameter("@subjectName", 20, subject.SubjectName, DbType.String));
+                    parameters.Add(dataProvider.CreateParameter("@majorID", 20, subject.MajorID, DbType.String));
                     dataProvider.Insert(SQLInsert, CommandType.Text, parameters.ToArray());
                 }
                 else
@@ -127,10 +127,11 @@ namespace DataAccess
                 SubjectObject c = GetSubjectByID(subject.SubjectID);
                 if (c != null)
                 {
-                    string SQLUpdate = "Update Subject set SubjectName = @SubjectName where SubjectID = @SubjectID";
+                    string SQLUpdate = "Update tblSubject set subjectName = @subjectName, majorID = majorID where subjectID = @subjectID";
                     var parameters = new List<SqlParameter>();
-                    parameters.Add(dataProvider.CreateParameter("@SubjectID", 20, subject.SubjectID, DbType.String));
-                    parameters.Add(dataProvider.CreateParameter("@SubjectName", 20, subject.SubjectName, DbType.String));
+                    parameters.Add(dataProvider.CreateParameter("@subjectID", 20, subject.SubjectID, DbType.String));
+                    parameters.Add(dataProvider.CreateParameter("@subjectName", 20, subject.SubjectName, DbType.String));
+                    parameters.Add(dataProvider.CreateParameter("@majorID", 20, subject.MajorID, DbType.String));
                     dataProvider.Update(SQLUpdate, CommandType.Text, parameters.ToArray());
                 }
                 else
@@ -154,8 +155,8 @@ namespace DataAccess
                 SubjectObject sub = GetSubjectByID(subjectID);
                 if (sub != null)
                 {
-                    string SQLDelete = "Delete Subject where SubjectID = @SubjectID";
-                    var param =  dataProvider.CreateParameter("@SubjectID", 20, subjectID,DbType.String);
+                    string SQLDelete = "Delete tblSubject where subjectID = @subjectID";
+                    var param = dataProvider.CreateParameter("@subjectID", 20, subjectID, DbType.String);
                     dataProvider.Delete(SQLDelete, CommandType.Text, param);
                 }
                 else

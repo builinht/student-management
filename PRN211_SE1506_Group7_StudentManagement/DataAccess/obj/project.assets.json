@@ -1890,19 +1890,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Khanh Linh\\.nuget\\packages\\": {}
+    "C:\\Users\\Admin\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Khanh Linh\\Documents\\GitHub\\student-management\\PRN211_SE1506_Group7_StudentManagement\\DataAccess\\DataAccess.csproj",
+      "projectUniqueName": "C:\\Users\\Admin\\Documents\\GitHub\\student-management\\PRN211_SE1506_Group7_StudentManagement\\DataAccess\\DataAccess.csproj",
       "projectName": "DataAccess",
-      "projectPath": "C:\\Users\\Khanh Linh\\Documents\\GitHub\\student-management\\PRN211_SE1506_Group7_StudentManagement\\DataAccess\\DataAccess.csproj",
-      "packagesPath": "C:\\Users\\Khanh Linh\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Khanh Linh\\Documents\\GitHub\\student-management\\PRN211_SE1506_Group7_StudentManagement\\DataAccess\\obj\\",
+      "projectPath": "C:\\Users\\Admin\\Documents\\GitHub\\student-management\\PRN211_SE1506_Group7_StudentManagement\\DataAccess\\DataAccess.csproj",
+      "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Admin\\Documents\\GitHub\\student-management\\PRN211_SE1506_Group7_StudentManagement\\DataAccess\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Khanh Linh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1916,8 +1916,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\Khanh Linh\\Documents\\GitHub\\student-management\\PRN211_SE1506_Group7_StudentManagement\\BusinessObject\\BusinessObject.csproj": {
-              "projectPath": "C:\\Users\\Khanh Linh\\Documents\\GitHub\\student-management\\PRN211_SE1506_Group7_StudentManagement\\BusinessObject\\BusinessObject.csproj"
+            "C:\\Users\\Admin\\Documents\\GitHub\\student-management\\PRN211_SE1506_Group7_StudentManagement\\BusinessObject\\BusinessObject.csproj": {
+              "projectPath": "C:\\Users\\Admin\\Documents\\GitHub\\student-management\\PRN211_SE1506_Group7_StudentManagement\\BusinessObject\\BusinessObject.csproj"
             }
           }
         }
@@ -1964,7 +1964,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
       }
     }
   }
