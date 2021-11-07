@@ -83,7 +83,8 @@ namespace SalesWinApp
             this.cboMajorName.Items.AddRange(new object[] {
             "Information Technology",
             "Business Object",
-            "English Language"});
+            "English Language",
+            "Artificial intelligence"});
             this.cboMajorName.Location = new System.Drawing.Point(254, 196);
             this.cboMajorName.Name = "cboMajorName";
             this.cboMajorName.Size = new System.Drawing.Size(313, 28);
