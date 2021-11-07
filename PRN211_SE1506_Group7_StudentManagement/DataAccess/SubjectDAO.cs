@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace DataAccess
 {
-    public class SubjectDAO :BaseDAL
+    public class SubjectDAO : BaseDAL
     {
         private static SubjectDAO instance = null;
         private static readonly object instanceLock = new object();
@@ -22,7 +22,7 @@ namespace DataAccess
             {
                 lock (instanceLock)
                 {
-                    if(instance == null)
+                    if (instance == null)
                     {
                         instance = new SubjectDAO();
                     }
@@ -31,10 +31,10 @@ namespace DataAccess
             }
         }
 
-        public IEnumerable<SubjectObject> GetSubjectsList()
+        public IEnumerable<SubjectObject> GetSubjectList()
         {
             IDataReader dataReader = null;
-            string SQLSelect = "Select SubjectID, SubjectName, MajorID from Subject";
+            string SQLSelect = "Select subjectID, majorID, subjectName from tblSubject";
             var subjects = new List<SubjectObject>();
             try
             {
@@ -43,9 +43,9 @@ namespace DataAccess
                 {
                     subjects.Add(new SubjectObject
                     {
-                        SubjectID = dataReader.GetString(0),
-                        SubjectName = dataReader.GetString(1),
-                        MajorID = dataReader.GetString(2)
+                        subjectID = dataReader.GetString(0),
+                        majorID = dataReader.GetString(1),
+                        subjectName = dataReader.GetString(2)
                     });
                 }
             }
@@ -60,22 +60,23 @@ namespace DataAccess
             }
             return subjects;
         }
+
         public SubjectObject GetSubjectByID(string subjectID)
         {
             SubjectObject subject = null;
             IDataReader dataReader = null;
-            string SQLSelect = "Select SubjectName, MajorID from Subject where SubjectID = @SubjectID";
+            string SQLSelect = "Select subjectID, majorID, subjectName from tblSubject where subjectID = @subjectID";
             try
             {
-                var param = dataProvider.CreateParameter("@SubjectID", 20, subjectID, DbType.String);
+                var param = dataProvider.CreateParameter("@subjectID", 20, subjectID, DbType.String);
                 dataReader = dataProvider.GetDataReader(SQLSelect, CommandType.Text, out connection, param);
                 if (dataReader.Read())
                 {
                     subject = new SubjectObject
                     {
-                        SubjectID = dataReader.GetString(0),
-                        SubjectName = dataReader.GetString(1),
-                        MajorID = dataReader.GetString(2)
+                        subjectID = dataReader.GetString(0),
+                        majorID = dataReader.GetString(1),
+                        subjectName = dataReader.GetString(2)
                     };
                 }
             }
@@ -91,23 +92,23 @@ namespace DataAccess
             return subject;
         }
 
-        public void AddNew(SubjectObject subject)
+        public void AddSubject(SubjectObject subject)
         {
             try
             {
-                SubjectObject pro = GetSubjectByID(subject.SubjectID);
-                if(pro == null)
+                SubjectObject pro = GetSubjectByID(subject.subjectID);
+                if (pro == null)
                 {
-                    string SQLInsert = "Insert Subject values(@SubjectID,@SubjectName,@MajorID)";
+                    string SQLInsert = "Insert tblSubject values(@subjectID,@majorID,@subjectName)";
                     var parameters = new List<SqlParameter>();
-                    parameters.Add(dataProvider.CreateParameter("@SubjectID", 20, subject.SubjectID, DbType.String));
-                    parameters.Add(dataProvider.CreateParameter("@SubjectName", 20, subject.SubjectName, DbType.String));
-                    parameters.Add(dataProvider.CreateParameter("@MajorID", 20, subject.MajorID, DbType.String));
+                    parameters.Add(dataProvider.CreateParameter("@subjectID", 20, subject.subjectID, DbType.String));
+                    parameters.Add(dataProvider.CreateParameter("@majorID", 20, subject.majorID, DbType.String));
+                    parameters.Add(dataProvider.CreateParameter("@subjectName", 50, subject.subjectName, DbType.String));
                     dataProvider.Insert(SQLInsert, CommandType.Text, parameters.ToArray());
                 }
                 else
                 {
-                    throw new Exception("The subjet is already exist. ");
+                    throw new Exception("The subject is already exist.");
                 }
             }
             catch (Exception ex)
@@ -120,22 +121,23 @@ namespace DataAccess
             }
         }
 
-        public void Update(SubjectObject subject)
+        public void UpdateSubject(SubjectObject subject)
         {
             try
             {
-                SubjectObject c = GetSubjectByID(subject.SubjectID);
-                if (c != null)
+                SubjectObject m = GetSubjectByID(subject.subjectID);
+                if (m != null)
                 {
-                    string SQLUpdate = "Update Subject set SubjectName = @SubjectName where SubjectID = @SubjectID";
+                    string SQLUpdate = "Update tblSubject set majorID=@majorID, subjectName=@subjectName where subjectId=@subjectId";
                     var parameters = new List<SqlParameter>();
-                    parameters.Add(dataProvider.CreateParameter("@SubjectID", 20, subject.SubjectID, DbType.String));
-                    parameters.Add(dataProvider.CreateParameter("@SubjectName", 20, subject.SubjectName, DbType.String));
+                    parameters.Add(dataProvider.CreateParameter("@subjectID", 20, subject.subjectID, DbType.String));
+                    parameters.Add(dataProvider.CreateParameter("@majorID", 20, subject.majorID, DbType.String));
+                    parameters.Add(dataProvider.CreateParameter("@subjectName", 50, subject.subjectName, DbType.String));
                     dataProvider.Update(SQLUpdate, CommandType.Text, parameters.ToArray());
                 }
                 else
                 {
-                    throw new Exception("The subjet does not exist. ");
+                    throw new Exception("The subject does not already exist.");
                 }
             }
             catch (Exception ex)
@@ -147,20 +149,20 @@ namespace DataAccess
                 CloseConnection();
             }
         }
-        public void Remove(string subjectID)
+        public void RemoveSubject(string subjectID)
         {
             try
             {
-                SubjectObject sub = GetSubjectByID(subjectID);
-                if (sub != null)
+                SubjectObject subject = GetSubjectByID(subjectID);
+                if (subject != null)
                 {
-                    string SQLDelete = "Delete Subject where SubjectID = @SubjectID";
-                    var param =  dataProvider.CreateParameter("@SubjectID", 20, subjectID,DbType.String);
+                    string SQLDelete = "Delete tblSubject where subjectID = @subjectID";
+                    var param = dataProvider.CreateParameter("@subjectID", 20, subjectID, DbType.String);
                     dataProvider.Delete(SQLDelete, CommandType.Text, param);
                 }
                 else
                 {
-                    throw new Exception("The subjet is already exist. ");
+                    throw new Exception("The subject does not already exist.");
                 }
             }
             catch (Exception ex)

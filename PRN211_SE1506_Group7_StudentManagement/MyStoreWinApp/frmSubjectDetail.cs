@@ -26,44 +26,36 @@ namespace MyStoreWinApp
         private void frmSubjectDetail_Load(object sender, EventArgs e)
         {
             txtSubjectID.Enabled = !InsertOrUpdate;
-            if (InsertOrUpdate == true)
+            if(InsertOrUpdate == true)
             {
-                txtSubjectName.Text = SubjectInfo.SubjectName.ToString();
-                txtMajorID.Text = SubjectInfo.MajorID.ToString();
+                txtSubjectID.Text = SubjectInfo.subjectID;
+                txtMajorID.Text = SubjectInfo.majorID;
+                txtSubjectName.Text = SubjectInfo.subjectName;
             }
         }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            if (txtSubjectName.Text.Equals("") ||
-                txtMajorID.Text.Equals(""))
+            try
             {
-                MessageBox.Show("Missing input !", "Error");
+                var subject = new SubjectObject
+                {
+                    subjectID = txtSubjectID.Text,
+                    majorID = txtMajorID.Text,
+                    subjectName = txtSubjectName.Text,
+                };
+                if(InsertOrUpdate == false)
+                {
+                    SubjectRepository.InsertSubject(subject);
+                }
+                else
+                {
+                    SubjectRepository.UpdateSubject(subject);
+                }
             }
-            else
+            catch (Exception ex)
             {
-                try
-                {
-                    var subject = new SubjectObject
-                    {
-                        SubjectName = txtSubjectName.Text,                  
-                        MajorID = txtMajorID.Text
-                    };
-                    if (InsertOrUpdate == false)
-                    {
-                        SubjectRepository.InsertSubject(subject);
-                    }
-                    else
-                    {
-                        SubjectRepository.UpdateSubject(subject);
-                    }
-                    this.DialogResult = DialogResult.OK;
-                    Close();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message, InsertOrUpdate == false ? "Add new subject" : "Update subject");
-                }
+                MessageBox.Show(ex.Message, InsertOrUpdate == false ? "Add a new member" : "Update a member");
             }
         }
 

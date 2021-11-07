@@ -16,30 +16,43 @@ namespace MyStoreWinApp
     {
         SubjectRepository subjectRepository = new SubjectRepository();
         BindingSource source;
-        SubjectObject subject;
-
+        
         public frmSubject()
         {
             InitializeComponent();
-            List<SubjectObject> subjects = new List<SubjectObject>();
         }
 
         public void LoadSubjectList()
         {
-            List<SubjectObject> subjects = new List<SubjectObject>();
-            subjects = (List<SubjectObject>)subjectRepository.GetSubjects();
-            btnDeleteSub.Enabled = true;
-            btnNewSub.Enabled = true;
+            var subjects = subjectRepository.GetSubjects();
             try
             {
                 source = new BindingSource();
-                source.DataSource = subject;
+                source.DataSource = subjects;
+
+                txtSubjectID.DataBindings.Clear();
+                txtMajorID.DataBindings.Clear();
+                txtSubjectName.DataBindings.Clear();
+
+                txtSubjectID.DataBindings.Add("Text", source, "subjectID");
+                txtMajorID.DataBindings.Add("Text", source, "majorID");
+                txtSubjectName.DataBindings.Add("Text", source, "subjectName");
+
                 dgvSubjectList.DataSource = null;
                 dgvSubjectList.DataSource = source;
+                if(subjects.Count() == 0)
+                {
+                    ClearTetx();
+                    btnDeleteSub.Enabled = false;
+                }
+                else
+                {
+                    btnDeleteSub.Enabled = true;
+                }
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
-                MessageBox.Show(ex.Message, "Load subject");
+                MessageBox.Show(ex.Message, "Load subject list");
             }
         }
 
@@ -50,27 +63,43 @@ namespace MyStoreWinApp
 
         private void btnDeleteSub_Click(object sender, EventArgs e)
         {
-            try
+            if (MessageBox.Show("Do you want to delete?", "Warning", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
             {
-                var subjects = GetSubjectObject();
-                subjectRepository.DeleteSubject(subject.SubjectID);
-                LoadSubjectList();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Delete subject");
+                try
+                {
+                    var subject = GetSubjectObject();
+                    subjectRepository.DeleteSubject(subject.subjectID);
+                    LoadSubjectList();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Delete a subject");
+                }
             }
         }
         private SubjectObject GetSubjectObject()
         {
-            SubjectObject subject = (SubjectObject)dgvSubjectList.CurrentRow.DataBoundItem;
+            SubjectObject subject = null;
+            try
+            {
+                subject = new SubjectObject
+                {
+                    subjectID = txtSubjectID.Text,
+                    subjectName = txtSubjectName.Text,
+                    majorID = txtMajorID.Text
+                };
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Get subject");
+            }
             return subject;
         }
 
         private void frmSubject_Load(object sender, EventArgs e)
         {
             btnDeleteSub.Enabled = false;
-            btnNewSub.Enabled = false;
+            dgvSubjectList.CellDoubleClick += dgvSubjectList_CellDoubleClick;
         }
 
         private void dgvSubjectList_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -102,6 +131,13 @@ namespace MyStoreWinApp
                 LoadSubjectList();
                 source.Position = source.Count - 1;
             }
+        }
+
+        private void ClearTetx()
+        {
+            txtSubjectID.Text = string.Empty;
+            txtSubjectName.Text = string.Empty;
+            txtMajorID.Text = string.Empty;
         }
     }
 }

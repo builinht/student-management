@@ -8,8 +8,8 @@ namespace BusinessObject
 {
     public class SubjectObject
     {
-        public string SubjectID { get; set; }
-        public string SubjectName { get; set; }
-        public string MajorID { get; set; }
+        public string subjectID { get; set; }
+        public string majorID { get; set; }
+        public string subjectName { get; set; }
     }
 }

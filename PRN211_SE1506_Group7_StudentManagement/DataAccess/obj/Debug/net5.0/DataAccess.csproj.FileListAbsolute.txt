@@ -41,7 +41,6 @@ E:\student-management\PRN211_SE1506_Group7_StudentManagement\DataAccess\obj\Debu
 E:\student-management\PRN211_SE1506_Group7_StudentManagement\DataAccess\obj\Debug\net5.0\DataAccess.dll
 E:\student-management\PRN211_SE1506_Group7_StudentManagement\DataAccess\obj\Debug\net5.0\ref\DataAccess.dll
 E:\student-management\PRN211_SE1506_Group7_StudentManagement\DataAccess\obj\Debug\net5.0\DataAccess.pdb
-E:\student-management\PRN211_SE1506_Group7_StudentManagement\DataAccess\obj\Debug\net5.0\DataAccess.csproj.CopyComplete
 C:\Users\PC\Documents\GitHub\student-management\PRN211_SE1506_Group7_StudentManagement\DataAccess\bin\Debug\net5.0\DataAccess.deps.json
 C:\Users\PC\Documents\GitHub\student-management\PRN211_SE1506_Group7_StudentManagement\DataAccess\bin\Debug\net5.0\DataAccess.dll
 C:\Users\PC\Documents\GitHub\student-management\PRN211_SE1506_Group7_StudentManagement\DataAccess\bin\Debug\net5.0\ref\DataAccess.dll
