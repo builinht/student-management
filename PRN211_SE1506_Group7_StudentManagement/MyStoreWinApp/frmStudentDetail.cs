@@ -7,6 +7,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -41,14 +42,29 @@ namespace MyStoreWinApp
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            if(txtName.Text.Equals("") || 
-                txtAddress.Text.Equals("") || 
-                txtPhone.Text.Equals("") || 
-                txtEmail.Text.Equals("") || 
-                txtBirthPlace.Text.Equals("")||
+            if (txtName.Text.Equals("") ||
+                txtAddress.Text.Equals("") ||
+                txtPhone.Text.Equals("") ||
+                txtEmail.Text.Equals("") ||
+                txtBirthPlace.Text.Equals("") ||
                 txtMajor.Text.Equals(""))
             {
                 MessageBox.Show("Missing input !", "Error");
+
+            }
+            else if (!Regex.Match(txtName.Text, "([\\sa-zA-Z]+)").Success)
+            {
+
+                MessageBox.Show("Invalid name", "Message");
+                txtName.Focus();
+                return;
+            }
+            else if (!Regex.Match(txtPhone.Text, "^[\\d]+$").Success)
+            {
+
+                MessageBox.Show("Invalid phone", "Message");
+                txtPhone.Focus();
+                return;
             }
             else
             {
@@ -72,7 +88,7 @@ namespace MyStoreWinApp
                         BirthPlace = txtBirthPlace.Text,
                         MajorId = txtMajor.Text
                     };
-                    if(InsertOrUpdate == false)
+                    if (InsertOrUpdate == false)
                     {
                         StudentRepository.InsertStudent(student);
                     }
@@ -83,7 +99,7 @@ namespace MyStoreWinApp
                     this.DialogResult = DialogResult.OK;
                     Close();
                 }
-                catch(Exception ex)
+                catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message, InsertOrUpdate == false ? "Add new student" : "Update student");
                 }
