@@ -45,7 +45,8 @@ namespace SalesWinApp
             this.cboSubjectID.Items.AddRange(new object[] {
             "IIP301",
             "MAE101",
-            "MKT201"});
+            "MKT201",
+            "IOT201"});
             this.cboSubjectID.Location = new System.Drawing.Point(259, 249);
             this.cboSubjectID.Name = "cboSubjectID";
             this.cboSubjectID.Size = new System.Drawing.Size(436, 28);
@@ -134,6 +135,7 @@ namespace SalesWinApp
             this.Controls.Add(this.lbCourseName);
             this.Controls.Add(this.lbCourseID);
             this.Name = "frmCourseDetail";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmCourseDetail";
             this.Load += new System.EventHandler(this.frmCourseDetail_Load);
             this.ResumeLayout(false);
