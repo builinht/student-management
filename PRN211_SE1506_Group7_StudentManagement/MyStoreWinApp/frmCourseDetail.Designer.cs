@@ -58,7 +58,8 @@ namespace SalesWinApp
             this.cboCourseName.Items.AddRange(new object[] {
             "Marketing",
             "Math",
-            "Internaltional Payment"});
+            "Internaltional Payment",
+            "Internet"});
             this.cboCourseName.Location = new System.Drawing.Point(259, 166);
             this.cboCourseName.Name = "cboCourseName";
             this.cboCourseName.Size = new System.Drawing.Size(436, 28);
