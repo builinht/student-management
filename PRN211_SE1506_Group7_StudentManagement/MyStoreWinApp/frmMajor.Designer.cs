@@ -84,7 +84,9 @@ namespace SalesWinApp
             "Information Technology",
             "Business Object",
             "English Language",
-            "Artificial intelligence"});
+            "Artificial intelligence",
+            "Graphic Design",
+            "Japanese Laguage"});
             this.cboMajorName.Location = new System.Drawing.Point(254, 196);
             this.cboMajorName.Name = "cboMajorName";
             this.cboMajorName.Size = new System.Drawing.Size(313, 28);
@@ -96,7 +98,10 @@ namespace SalesWinApp
             this.cboMajorID.Items.AddRange(new object[] {
             "SS",
             "SE",
-            "SA"});
+            "SA",
+            "SG",
+            "RE",
+            "AI"});
             this.cboMajorID.Location = new System.Drawing.Point(254, 95);
             this.cboMajorID.Name = "cboMajorID";
             this.cboMajorID.Size = new System.Drawing.Size(313, 28);
