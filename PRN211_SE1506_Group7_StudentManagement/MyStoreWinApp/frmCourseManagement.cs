@@ -1,6 +1,5 @@
 ﻿using BusinessObject;
 using DataAccess.Repository;
-
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,149 +10,166 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SalesWinApp
+namespace MyStoreWinApp
 {
-
     public partial class frmCourseManagement : Form
     {
-        tblCourseRepository courseRepository = new tblCourseRepository();
+        ICourseRepository courseRepository = new CourseRepository();
         BindingSource source;
-        tblCourse course;
         public frmCourseManagement()
         {
             InitializeComponent();
         }
-        public frmCourseManagement(tblCourse course)
-        {
-            this.course = course;
-            InitializeComponent();
-        }
-        /// <summary>
-        /// ///vô bài xóa đi hàm isAdmin
-        /// </summary>
-        /// <param name="member"></param>
-        /// <returns></returns>
-         public bool isAdmin(UserObject member)
-        {
 
-            if (member.UserEmail.Contains("@fstore.com"))
-            {
-
-                return true;
-            }
-            else return false;
-        }
-        
-        private void frmCourseManagement_Load(object sender, EventArgs e)
-        {
-            btnAdd.Enabled = false;
-            btnDelete.Enabled = false;
-        }
-
-        public void LoadCourseList()
-        {
-            List<tblCourse> courses = new List<tblCourse>();
-            courses = (List<tblCourse>)courseRepository.GettblCourses();
-            try
-            {
-                source = new BindingSource();
-                source.DataSource = courses;
-                dgvCourseList.DataSource = null;
-                dgvCourseList.DataSource = source;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Load tblCourse");
-            }
-        }
         private void btnLoad_Click(object sender, EventArgs e)
         {
             LoadCourseList();
-            btnAdd.Enabled = true;
-            btnDelete.Enabled = true;
-        }
-        private tblCourse GettblCourse()
-        {
-            tblCourse courses = (tblCourse)dgvCourseList.CurrentRow.DataBoundItem;
-            return courses;
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void btnAdd_Click(object sender, EventArgs e)
         {
-                 
-                frmCourseDetail frm = new frmCourseDetail
-                {
-                    Text = "Update Course",
-                    InsertOrUpdate = true,
-                    CourseInfo = GettblCourse(),
-                    courseRepository = courseRepository
-                };
-            if (frm.ShowDialog() == DialogResult.OK)
+            frmCourseDetail frmCourseDetail = new frmCourseDetail
+            {
+                Text = "Add course",
+                InsertOrUpdate = false,
+                CourseRepository = courseRepository
+            };
+            if(frmCourseDetail.ShowDialog() == DialogResult.OK)
             {
                 LoadCourseList();
                 source.Position = source.Count - 1;
-            
+            }
         }
-    }
 
-        private void btnDelete_Click_1(object sender, EventArgs e)
+        private void btnDelete_Click(object sender, EventArgs e)
         {
+            if (MessageBox.Show("Do you want to delete?", "Warning", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
+            {
                 try
                 {
-                    var course = GettblCourses();
-                    courseRepository.DeletetblCourse(course.courseID);
+                    var course = GetCourseObject();
+                    courseRepository.DeleteCourse(course.courseID);
                     LoadCourseList();
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message, "Delete Course");
+                    MessageBox.Show(ex.Message, "Delete a course");
                 }
             }
-        private tblCourse GettblCourses()
+        }
+
+        private void frmCourseManagement_Load(object sender, EventArgs e)
         {
-            tblCourse course = (tblCourse)dgvCourseList.CurrentRow.DataBoundItem;
+            btnDelete.Enabled = false;
+            dgvCourseList.CellDoubleClick += dgvCourseList_CellDoubleClick;
+        }
+
+        private void ClearText()
+        {
+            txtCourseID.Text = string.Empty;
+            txtSubjectID.Text = string.Empty;
+            txtCourseName.Text = string.Empty;
+        }
+
+        private CourseObject GetCourseObject()
+        {
+            CourseObject course = null;
+            try
+            {
+                course = new CourseObject
+                {
+                    courseID = int.Parse(txtCourseID.Text),
+                    subjectID = txtSubjectID.Text,
+                    courseName = txtCourseName.Text
+                };
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Get course");
+            }
             return course;
         }
 
-        private void Search_Click(object sender, EventArgs e)
+        private void LoadCourseList()
         {
-            if (txtSearch.Text.Equals(""))
+            var courses = courseRepository.GetCourses();
+            try
             {
-                MessageBox.Show("Missing input !", "Error");
-            }
-            else
-            {
-                List<tblCourse> list = (List<tblCourse>)courseRepository.GettblCourses();
-                list = list.FindAll(pro => pro.courseName.ToString().Contains(txtSearch.Text));
-                try
-                {
-                    source = new BindingSource();
-                    source.DataSource = list;
-                    dgvCourseList.DataSource = null;
-                    dgvCourseList.DataSource = source;
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message, "Search tblCourse");
-                }
-            }
+                source = new BindingSource();
+                source.DataSource = courses;
 
+                txtCourseID.DataBindings.Clear();
+                txtSubjectID.DataBindings.Clear();
+                txtCourseName.DataBindings.Clear();
+
+                txtCourseID.DataBindings.Add("Text", source, "courseID");
+                txtSubjectID.DataBindings.Add("Text", source, "subjectID");
+                txtCourseName.DataBindings.Add("Text", source, "courseName");
+
+                dgvCourseList.DataSource = null;
+                dgvCourseList.DataSource = source;
+                if(courses.Count() == 0)
+                {
+                    ClearText();
+                    btnDelete.Enabled = false;
+                }
+                else
+                {
+                    btnDelete.Enabled = true;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Load course list");
+            }
         }
 
-        private void btnAdd_Click_1(object sender, EventArgs e)
+        private void dgvCourseList_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            frmCourseDetail frm = new frmCourseDetail()
+            frmCourseDetail frmCourseDetail = new frmCourseDetail
             {
-                Text = "Add tblCourse",
-                InsertOrUpdate = false,
-                courseRepository = courseRepository
+                Text = "Update course",
+                InsertOrUpdate = true,
+                CourseInfo = GetCourseObject(),
+                CourseRepository = courseRepository
             };
-            if (frm.ShowDialog() == DialogResult.OK)
+            if(frmCourseDetail.ShowDialog() == DialogResult.OK)
             {
                 LoadCourseList();
                 source.Position = source.Count - 1;
             }
-            frm.Show();
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrWhiteSpace(txtCourseName.Text))
+            {
+                if (txtCourseName.Text.Equals(""))
+                {
+                    MessageBox.Show("You have not entered!", "Error");
+                }
+                else
+                {
+                    List<CourseObject> list = (List<CourseObject>)courseRepository.GetCourses();
+                    list = list.FindAll(m => m.courseName.ToLower().ToString().Contains(txtCourseName.Text.ToLower()));
+                    try
+                    {
+                        source = new BindingSource();
+                        source.DataSource = list;
+                        dgvCourseList.DataSource = null;
+                        dgvCourseList.DataSource = source;
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message, "Search Course");
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("You have not entered!", "Notice", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtCourseName.Focus();   
+            }
         }
     }
 }
