@@ -149,7 +149,7 @@ namespace MyStoreWinApp
             this.Controls.Add(this.lbMajorID);
             this.Name = "frmMajorManagement";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "MajorManagement";
+            this.Text = "frmMajorManagement";
             this.Load += new System.EventHandler(this.frmMajorManagement_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvMajorList)).EndInit();
             this.ResumeLayout(false);

@@ -131,7 +131,7 @@ namespace MyStoreWinApp
             this.Controls.Add(this.lbCourseID);
             this.Name = "frmCourseDetail";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "CourseDetail";
+            this.Text = "AddtblCourse";
             this.Load += new System.EventHandler(this.CourseDetail_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

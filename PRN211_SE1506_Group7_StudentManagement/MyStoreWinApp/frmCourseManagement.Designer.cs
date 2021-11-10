@@ -170,7 +170,7 @@ namespace MyStoreWinApp
             this.Controls.Add(this.lbCourseID);
             this.Name = "frmCourseManagement";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "CourseManagement";
+            this.Text = "frmCourseManagement";
             this.Load += new System.EventHandler(this.frmCourseManagement_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCourseList)).EndInit();
             this.ResumeLayout(false);
