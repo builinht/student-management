@@ -1,6 +1,5 @@
 ﻿using BusinessObject;
 using DataAccess.Repository;
-
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,162 +10,160 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SalesWinApp
+namespace MyStoreWinApp
 {
     public partial class frmMajorManagement : Form
-    {   
+    {
         MajorRepository majorRepository = new MajorRepository();
         BindingSource source;
-        
-        
-        
-        
-
-        
         public frmMajorManagement()
         {
             InitializeComponent();
         }
-       
-        private void frmMajorManagement_Load(object sender, EventArgs e)
-        {
-            btnAdd.Enabled = false;
-            btnDelete.Enabled = false;
-        }
 
         public void LoadMajorList()
         {
-            List<MajorObject> majors = new List<MajorObject>();
-            majors = (List<MajorObject>)majorRepository.GettblMajors();
+            var majors = majorRepository.GetMajors();
             try
-            {   
+            {
                 source = new BindingSource();
                 source.DataSource = majors;
-                
+
+                txtMajorID.DataBindings.Clear();
+                txtMajorName.DataBindings.Clear();
+
+                txtMajorID.DataBindings.Add("Text", source, "majorID");
+                txtMajorName.DataBindings.Add("Text", source, "majorName");
+
                 dgvMajorList.DataSource = null;
                 dgvMajorList.DataSource = source;
+                if(majors.Count() == 0)
+                {
+                    ClearText();
+                    btnDelete.Enabled = false;
+                }
+                else
+                {
+                    btnDelete.Enabled = true;
+                }
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Load Major");
+                MessageBox.Show(ex.Message, "Load major list");
             }
-        }
-
-        private void BtnLoad_Click(object sender, EventArgs e)
-        {
-            LoadMajorList();
-            btnAdd.Enabled = true;
-            btnDelete.Enabled = true;
-        }
-        private MajorObject GettblMajor()
-        {
-            MajorObject majors = (MajorObject)dgvMajorList.CurrentRow.DataBoundItem;
-            return majors;
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            frmMajor frm = new frmMajor
-            {
-                Text = "Update Major",
-                InsertOrUpdate = true,
-                MajorInfo = GettblMajor(),
-                tblMajorRepository = majorRepository
-            };
-            if (frm.ShowDialog() == DialogResult.OK)
-            {
-                LoadMajorList();
-                source.Position = source.Count - 1; 
-            }
-        }
-
-        private void btnAdd_Click(object sender, EventArgs e)
-        {
-            frmMajor frm = new frmMajor
-            {
-                Text = "Add Major",
-                InsertOrUpdate = false,
-                MajorInfo = GettblMajor(),
-                tblMajorRepository = majorRepository
-            };
-            
-            if (frm.ShowDialog() == DialogResult.OK)
-            {
-                LoadMajorList();
-                source.Position = source.Count - 1;
-            }
-            frm.Show();
 
         }
 
-        private void btnDelete_Click(object sender, EventArgs e)
+        private void ClearText()
         {
-            try
-            {
-                var majors = GettblMajor();
-                majorRepository.DeletetblMajor(majors.MajorId);
-                LoadMajorList();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Delete Major");
-            }
+            txtMajorID.Text = string.Empty;
+            txtMajorName.Text = string.Empty;
         }
-        private MajorObject GetTblMajor()
+        private MajorObject GetMajorObject()
         {
             MajorObject major = null;
             try
             {
                 major = new MajorObject
                 {
-                //    SubjectID = cboMajorID.Text,
-                  //  MajorId = cboMajorID.Text,
-                   // NameMajor = cboMajorName.Text,
-                    
+                    majorID = txtMajorID.Text,
+                    majorName = txtMajorName.Text
                 };
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Get Major");
+                MessageBox.Show(ex.Message, "Get car");
             }
             return major;
-        }
-        private void frmMajor_Load(object sender, EventArgs e)
-        {
-     
-            LoadMajorList();
         }
         private void btnLoad_Click(object sender, EventArgs e)
         {
             LoadMajorList();
         }
-         private void ClearText()
+
+        private void btnAdd_Click(object sender, EventArgs e)
         {
-            
+            frmMajorDetail frmMajorDetail = new frmMajorDetail
+            {
+                Text = "Add major",
+                InsertOrUpdate = false,
+                MajorRepository = majorRepository
+            };
+            if(frmMajorDetail.ShowDialog() == DialogResult.OK)
+            {
+                LoadMajorList();
+                source.Position = source.Count - 1;
+            }
         }
 
-
-        private void btnSearch_Click(object sender, EventArgs e)
+        private void btnDelete_Click(object sender, EventArgs e)
         {
-            if (txtSearch.Text.Equals(""))
+            if (MessageBox.Show("Do you want to delete?", "Warning", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
             {
-                MessageBox.Show("Missing input !", "Error");
-            }
-            else
-            {
-                List<MajorObject> list = (List<MajorObject>)majorRepository.GettblMajors();
-                list = list.FindAll(pro => pro.NameMajor.ToString().Contains(txtSearch.Text));
                 try
                 {
-                    source = new BindingSource();
-                    source.DataSource = list;
-                    dgvMajorList.DataSource = null;
-                    dgvMajorList.DataSource = source;
+                    var member = GetMajorObject();
+                    majorRepository.DeleteMajor(member.majorID);
+                    LoadMajorList();
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message, "Search Major");
+                    MessageBox.Show(ex.Message, "Delete a major");
                 }
+            }
+        }
+
+        private void frmMajorManagement_Load(object sender, EventArgs e)
+        {
+            btnDelete.Enabled = false;
+            dgvMajorList.CellDoubleClick += dgvMajorList_CellDoubleClick;
+        }
+
+        private void dgvMajorList_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            frmMajorDetail frmMajorDetail = new frmMajorDetail
+            {
+                Text = "Update major",
+                InsertOrUpdate = true,
+                MajorInfo = GetMajorObject(),
+                MajorRepository = majorRepository
+            };
+            if(frmMajorDetail.ShowDialog() == DialogResult.OK)
+            {
+                LoadMajorList();
+                source.Position = source.Count - 1;
+            }
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrWhiteSpace(txtSearch.Text))
+            {
+                if (txtSearch.Text.Equals(""))
+                {
+                    MessageBox.Show("You have not entered!", "Error");
+                }
+                else
+                {
+                    List<MajorObject> list = (List<MajorObject>)majorRepository.GetMajors();
+                    list = list.FindAll(m => m.majorName.ToLower().ToString().Contains(txtSearch.Text.ToLower()));
+                    try
+                    {
+                        source = new BindingSource();
+                        source.DataSource = list;
+                        dgvMajorList.DataSource = null;
+                        dgvMajorList.DataSource = source;
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message, "Search Major");
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("You have not entered!", "Notice", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtSearch.Focus();
             }
         }
     }

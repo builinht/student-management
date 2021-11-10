@@ -8,7 +8,7 @@ namespace BusinessObject
 {
     public class MajorObject
     {
-        public string MajorId { get; set; }
-        public string NameMajor { get; set; }
+        public string majorID { get; set; }
+        public string majorName { get; set; }
     }
 }

@@ -1,5 +1,4 @@
 ﻿using BusinessObject;
-using SalesWinApp;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -86,7 +85,7 @@ namespace MyStoreWinApp
 
         private void tsbMajor_Click(object sender, EventArgs e)
         {
-            frmMajorManagement m = new frmMajorManagement();
+            frmSubject m = new frmSubject();
             AddForm(m);
         }
 

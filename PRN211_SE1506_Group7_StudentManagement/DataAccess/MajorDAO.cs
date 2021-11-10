@@ -29,11 +29,11 @@ namespace DataAccess
             }
         }
 
-        public IEnumerable<MajorObject> GettblMajorList()
+        public IEnumerable<MajorObject> GetMajorList()
         {
             IDataReader dataReader = null;
-            string SQLSelect = "Select majorID, majorName from tblMajor  ";
-            var majors = new List<MajorObject>();
+            string SQLSelect = "Select majorID, majorName from tblMajor";
+            var majors = new List<MajorObject> ();
             try
             {
                 dataReader = dataProvider.GetDataReader(SQLSelect, CommandType.Text, out connection);
@@ -41,10 +41,9 @@ namespace DataAccess
                 {
                     majors.Add(new MajorObject
                     {
-                        MajorId = dataReader.GetString(0),
-                        NameMajor = dataReader.GetString(1),
-                    }
-                    );
+                        majorID = dataReader.GetString(0),
+                        majorName = dataReader.GetString(1)
+                    });
                 }
             }
             catch (Exception ex)
@@ -59,22 +58,21 @@ namespace DataAccess
             return majors;
         }
 
-        public MajorObject GettblMajorByID(string MajorId)
+        public MajorObject GetMajorByID(string majorID)
         {
-            MajorObject majors = null;
+            MajorObject major = null;
             IDataReader dataReader = null;
-            string SQLSelect = "Select majorID ,majorName from tblMajor Where majorID=@majorID";
+            string SQLSelect = "Select majorID,majorName from tblMajor where majorID = @majorID";
             try
             {
-                var param = dataProvider.CreateParameter("@majorID", 50, MajorId, DbType.String);
+                var param = dataProvider.CreateParameter("@majorID", 20, majorID, DbType.String);
                 dataReader = dataProvider.GetDataReader(SQLSelect, CommandType.Text, out connection, param);
                 if (dataReader.Read())
                 {
-                    majors = new MajorObject
+                    major = new MajorObject
                     {
-                        MajorId = dataReader.GetString(0),
-                        NameMajor = dataReader.GetString(1),
-
+                        majorID = dataReader.GetString(0),
+                        majorName = dataReader.GetString(1)
                     };
                 }
             }
@@ -87,26 +85,25 @@ namespace DataAccess
                 dataReader.Close();
                 CloseConnection();
             }
-            return majors;
-
+            return major;
         }
 
-        public void AddNew(MajorObject majors)
+        public void AddMajor(MajorObject major)
         {
             try
             {
-                MajorObject m = GettblMajorByID(majors.MajorId);
-                if (m == null)
+                MajorObject pro = GetMajorByID(major.majorID);
+                if (pro == null)
                 {
-                    string SQLInsert = " Insert tblMajor Values (@majorID,@majorName)";
+                    string SQLInsert = "Insert tblMajor values(@majorID,@majorName)";
                     var parameters = new List<SqlParameter>();
-                    parameters.Add(dataProvider.CreateParameter("@majorID", 20, majors.MajorId, DbType.String));
-                    parameters.Add(dataProvider.CreateParameter("@majorName", 50, majors.NameMajor, DbType.String));
+                    parameters.Add(dataProvider.CreateParameter("@majorID", 20, major.majorID, DbType.String));
+                    parameters.Add(dataProvider.CreateParameter("@majorName", 50, major.majorName, DbType.String));
                     dataProvider.Insert(SQLInsert, CommandType.Text, parameters.ToArray());
                 }
                 else
                 {
-                    throw new Exception("This tblMajor is existed");
+                    throw new Exception("The major is already exist.");
                 }
             }
             catch (Exception ex)
@@ -119,23 +116,22 @@ namespace DataAccess
             }
         }
 
-        public void Update(MajorObject majors)
+        public void UpdateMajor(MajorObject major)
         {
             try
             {
-                MajorObject m = GettblMajorByID(majors.MajorId);
+                MajorObject m = GetMajorByID(major.majorID);
                 if (m != null)
                 {
-
-                    string SQLUpdate = "Update tblMajor set majorName=@majorName where majorID=@majorID";
+                    string SQLUpdate = "Update tblMajor set majorName = @majorName where majorID=@majorID";
                     var parameters = new List<SqlParameter>();
-                    parameters.Add(dataProvider.CreateParameter("@majorID", 20, majors.MajorId, DbType.String));
-                    parameters.Add(dataProvider.CreateParameter("@majorName", 50, majors.NameMajor, DbType.String));
+                    parameters.Add(dataProvider.CreateParameter("@majorID", 20, major.majorID, DbType.String));
+                    parameters.Add(dataProvider.CreateParameter("@majorName", 50, major.majorName, DbType.String));
                     dataProvider.Update(SQLUpdate, CommandType.Text, parameters.ToArray());
                 }
                 else
                 {
-                    throw new Exception("This tblMajor does not exist");
+                    throw new Exception("The major does not already exist.");
                 }
             }
             catch (Exception ex)
@@ -148,20 +144,20 @@ namespace DataAccess
             }
         }
 
-        public void Remove(string majorId)
+        public void RemoveMajor(string majorID)
         {
             try
             {
-                MajorObject m = GettblMajorByID(majorId);
-                if (m != null)
+                MajorObject major = GetMajorByID(majorID);
+                if (major != null)
                 {
-                    string SQLDelete = " Delete tblMajor where majorID=@majorID";
-                    var param = dataProvider.CreateParameter("@majorID", 20, majorId, DbType.String);
+                    string SQLDelete = "Delete tblMajor where majorID = @majorID";
+                    var param = dataProvider.CreateParameter("@majorID",20, majorID, DbType.String);
                     dataProvider.Delete(SQLDelete, CommandType.Text, param);
                 }
                 else
                 {
-                    throw new Exception("The tblMajor does not already exist.");
+                    throw new Exception("The major does not already exist.");
                 }
             }
             catch (Exception ex)

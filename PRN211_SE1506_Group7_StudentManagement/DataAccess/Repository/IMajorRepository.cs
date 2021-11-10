@@ -9,10 +9,10 @@ namespace DataAccess.Repository
 {
     public interface IMajorRepository
     {
-        IEnumerable<MajorObject> GettblMajors();
-        MajorObject GettblMajorByID(string MajorId);
-        void InserttblMajor(MajorObject majors);
-        void DeletetblMajor(string majorId);
-        void UpdatetblMajor(MajorObject majors);
+        IEnumerable<MajorObject> GetMajors();
+        MajorObject GetMajorByID(string majorID);
+        void InsertMajor(MajorObject major);
+        void DeleteMajor(string majorID);
+        void UpdateMajor(MajorObject major);
     }
 }
