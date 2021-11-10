@@ -9,10 +9,10 @@ namespace DataAccess.Repository
 {
     public class MajorRepository : IMajorRepository
     {
-        public MajorObject GettblMajorByID(string MajorId) => MajorDAO.Instance.GettblMajorByID(MajorId);
-        public IEnumerable<MajorObject> GettblMajors() => MajorDAO.Instance.GettblMajorList();
-        public void InserttblMajor(MajorObject majors) => MajorDAO.Instance.AddNew(majors);
-        public void DeletetblMajor(string majorId) => MajorDAO.Instance.Remove(majorId);
-        public void UpdatetblMajor(MajorObject majors) => MajorDAO.Instance.Update(majors);
+        public MajorObject GetMajorByID(string majorID) => MajorDAO.Instance.GetMajorByID(majorID);
+        public IEnumerable<MajorObject> GetMajors() => MajorDAO.Instance.GetMajorList();
+        public void InsertMajor(MajorObject major) => MajorDAO.Instance.AddMajor(major);
+        public void DeleteMajor(string majorID) => MajorDAO.Instance.RemoveMajor(majorID);
+        public void UpdateMajor(MajorObject major) => MajorDAO.Instance.UpdateMajor(major);
     }
 }

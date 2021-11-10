@@ -235,10 +235,6 @@ C:\Users\PC\Documents\GitHub\student-management\PRN211_SE1506_Group7_StudentMana
 C:\Users\PC\Documents\GitHub\student-management\PRN211_SE1506_Group7_StudentManagement\MyStoreWinApp\obj\Debug\net5.0-windows\SalesWinApp.frmMajorManagement.resources
 C:\Users\PC\Documents\GitHub\student-management\PRN211_SE1506_Group7_StudentManagement\MyStoreWinApp\obj\Debug\net5.0-windows\MyStoreWinApp.genruntimeconfig.cache
 C:\Users\PC\Documents\GitHub\student-management\PRN211_SE1506_Group7_StudentManagement\MyStoreWinApp\obj\Debug\net5.0-windows\MyStoreWinApp.csproj.CopyComplete
-E:\student-management\PRN211_SE1506_Group7_StudentManagement\MyStoreWinApp\obj\Debug\net5.0-windows\SalesWinApp.frmCourseDetail.resources
-E:\student-management\PRN211_SE1506_Group7_StudentManagement\MyStoreWinApp\obj\Debug\net5.0-windows\SalesWinApp.frmCourseManagement.resources
-E:\student-management\PRN211_SE1506_Group7_StudentManagement\MyStoreWinApp\obj\Debug\net5.0-windows\SalesWinApp.frmMajor.resources
-E:\student-management\PRN211_SE1506_Group7_StudentManagement\MyStoreWinApp\obj\Debug\net5.0-windows\SalesWinApp.frmMajorManagement.resources
 D:\SWP391\student-management-main\PRN211_SE1506_Group7_StudentManagement\MyStoreWinApp\bin\Debug\net5.0-windows\MyStoreWinApp.exe
 D:\SWP391\student-management-main\PRN211_SE1506_Group7_StudentManagement\MyStoreWinApp\bin\Debug\net5.0-windows\appsettings.json
 D:\SWP391\student-management-main\PRN211_SE1506_Group7_StudentManagement\MyStoreWinApp\bin\Debug\net5.0-windows\MyStoreWinApp.deps.json
@@ -303,3 +299,7 @@ D:\SWP391\student-management-main\PRN211_SE1506_Group7_StudentManagement\MyStore
 D:\SWP391\student-management-main\PRN211_SE1506_Group7_StudentManagement\MyStoreWinApp\obj\Debug\net5.0-windows\MyStoreWinApp.genruntimeconfig.cache
 D:\SWP391\student-management-main\PRN211_SE1506_Group7_StudentManagement\MyStoreWinApp\obj\Debug\net5.0-windows\MyStoreWinApp.frmCourseDetail.resources
 D:\SWP391\student-management-main\PRN211_SE1506_Group7_StudentManagement\MyStoreWinApp\obj\Debug\net5.0-windows\MyStoreWinApp.frmCourseManagement.resources
+E:\student-management\PRN211_SE1506_Group7_StudentManagement\MyStoreWinApp\obj\Debug\net5.0-windows\MyStoreWinApp.frmCourseDetail.resources
+E:\student-management\PRN211_SE1506_Group7_StudentManagement\MyStoreWinApp\obj\Debug\net5.0-windows\MyStoreWinApp.frmCourseManagement.resources
+E:\student-management\PRN211_SE1506_Group7_StudentManagement\MyStoreWinApp\obj\Debug\net5.0-windows\MyStoreWinApp.frmMajorDetail.resources
+E:\student-management\PRN211_SE1506_Group7_StudentManagement\MyStoreWinApp\obj\Debug\net5.0-windows\MyStoreWinApp.frmMajorManagement.resources

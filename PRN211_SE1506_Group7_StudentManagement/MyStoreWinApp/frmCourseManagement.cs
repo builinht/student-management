@@ -142,16 +142,16 @@ namespace MyStoreWinApp
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            if (!string.IsNullOrWhiteSpace(txtCourseName.Text))
+            if (!string.IsNullOrWhiteSpace(txtSearch.Text))
             {
-                if (txtCourseName.Text.Equals(""))
+                if (txtSearch.Text.Equals(""))
                 {
                     MessageBox.Show("You have not entered!", "Error");
                 }
                 else
                 {
                     List<CourseObject> list = (List<CourseObject>)courseRepository.GetCourses();
-                    list = list.FindAll(m => m.courseName.ToLower().ToString().Contains(txtCourseName.Text.ToLower()));
+                    list = list.FindAll(m => m.courseName.ToLower().ToString().Contains(txtSearch.Text.ToLower()));
                     try
                     {
                         source = new BindingSource();
@@ -168,7 +168,7 @@ namespace MyStoreWinApp
             else
             {
                 MessageBox.Show("You have not entered!", "Notice", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                txtCourseName.Focus();   
+                txtSearch.Focus();   
             }
         }
     }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "wVGlX7GeQz0pOq2OmgyAPgBhvoRtwmlL9++SKMp3qsDr4l9mcpuKof4QoMVIZ62r/+nKEAZFcHyNjynECnllUQ==",
+  "dgSpecHash": "NtgjeXgIkIqO2ruVoKDgjFHcZfgaLozwMBLCTz04JSbGecIbjEq2oWeK5QNBS/LeiduJhF3g6/xJK/5wTeJ1sQ==",
   "success": true,
-  "projectFilePath": "D:\\SWP391\\student-management-main\\PRN211_SE1506_Group7_StudentManagement\\BusinessObject\\BusinessObject.csproj",
+  "projectFilePath": "E:\\student-management\\PRN211_SE1506_Group7_StudentManagement\\BusinessObject\\BusinessObject.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\buili\\.nuget\\packages\\azure.core\\1.6.0\\azure.core.1.6.0.nupkg.sha512",
     "C:\\Users\\buili\\.nuget\\packages\\azure.identity\\1.3.0\\azure.identity.1.3.0.nupkg.sha512",
