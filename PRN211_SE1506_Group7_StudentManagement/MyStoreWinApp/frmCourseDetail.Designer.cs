@@ -85,7 +85,10 @@ namespace MyStoreWinApp
             this.cboSubjectID.FormattingEnabled = true;
             this.cboSubjectID.Items.AddRange(new object[] {
             "MAE101",
-            "IOT201"});
+            "IOT201",
+            "SSG103",
+            "SWR203",
+            "NWC202"});
             this.cboSubjectID.Location = new System.Drawing.Point(218, 141);
             this.cboSubjectID.Name = "cboSubjectID";
             this.cboSubjectID.Size = new System.Drawing.Size(151, 28);

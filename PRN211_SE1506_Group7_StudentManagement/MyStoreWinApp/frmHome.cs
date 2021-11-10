@@ -85,7 +85,7 @@ namespace MyStoreWinApp
 
         private void tsbMajor_Click(object sender, EventArgs e)
         {
-            frmSubject m = new frmSubject();
+            frmMajorManagement m = new frmMajorManagement();
             AddForm(m);
         }
 
