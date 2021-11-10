@@ -1,6 +1,5 @@
 ﻿using BusinessObject;
 using DataAccess.Repository;
-
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,7 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SalesWinApp
+namespace MyStoreWinApp
 {
     public partial class frmCourseDetail : Form
     {
@@ -19,63 +18,47 @@ namespace SalesWinApp
         {
             InitializeComponent();
         }
-        public ItblCourseRepository courseRepository { get; set; }
+
+        public ICourseRepository CourseRepository { get; set; }
         public bool InsertOrUpdate { get; set; }
-        public tblCourse CourseInfo { get; set; }
-        private void frmCourseDetail_Load(object sender, EventArgs e)
-        {
-            txtCourseID.Enabled = !InsertOrUpdate;
-            if (InsertOrUpdate == true)
-            {
-                txtCourseID.Text = CourseInfo.courseID.ToString();
-                cboCourseName.Text = CourseInfo.courseName.ToString();
-                cboCourseName.Text = CourseInfo.subjectID.ToString();
-
-
-            }
-        }
+        public CourseObject CourseInfo { get; set; }
         private void btnSave_Click(object sender, EventArgs e)
         {
-            var eugu = cboSubjectID;
-            if (txtCourseID.Text.Equals("") || cboCourseName.Text.Equals("") || cboSubjectID.Text.Equals(""))
+            try
             {
-                MessageBox.Show("Missing input !", "Error");
+                var course = new CourseObject
+                {
+                    courseID = int.Parse(txtCourseID.Text),
+                    subjectID = cboSubjectID.Text,
+                    courseName = txtCourseName.Text
+                };
+                if (InsertOrUpdate == false)
+                {
+                    CourseRepository.InsertCourse(course);
+                }
+                else
+                {
+                    CourseRepository.UpdateCourse(course);
+                }
             }
-            else
+            catch (Exception ex)
             {
-                try
-                {
-                    var courses = new tblCourse
-                    {
-                        courseID = Int32.Parse(txtCourseID.Text),
-                        courseName = cboCourseName.Text,
-                        subjectID = cboSubjectID.Text
-
-                    };
-                    if (InsertOrUpdate == false)
-                    {
-                        courseRepository.InserttblCourse(courses);
-                    }
-                    else
-                    {
-                        courseRepository.UpdatetblCourse(courses);
-                    }
-                    this.DialogResult = DialogResult.OK;
-                    Close();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message, InsertOrUpdate == false ? "Add new Course" : "Update Course");
-                }
+                MessageBox.Show(ex.Message, InsertOrUpdate == false ? "Add a new course" : "Update a course");
             }
         }
 
-       
         private void btnCancel_Click(object sender, EventArgs e) => Close();
 
-        private void lbSubjectID_Click(object sender, EventArgs e)
+        private void CourseDetail_Load(object sender, EventArgs e)
         {
-
+            cboSubjectID.SelectedIndex = 0;
+            txtCourseID.Enabled = !InsertOrUpdate;
+            if(InsertOrUpdate == true)
+            {
+                txtCourseID.Text = CourseInfo.courseID.ToString();
+                cboSubjectID.Text = CourseInfo.subjectID.Trim();
+                txtCourseName.Text = CourseInfo.courseName;
+            }
         }
     }
 }

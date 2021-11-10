@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace BusinessObject
 {
-    class CourseObject
+    public class CourseObject
     {
+        public int courseID { get; set; }
+        public string subjectID { get; set; }
+        public string courseName { get; set; }
     }
 }
