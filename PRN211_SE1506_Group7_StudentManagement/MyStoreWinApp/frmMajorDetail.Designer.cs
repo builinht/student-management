@@ -104,7 +104,7 @@ namespace MyStoreWinApp
             this.Controls.Add(this.lbMajorID);
             this.Name = "frmMajorDetail";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmMajorDetail";
+            this.Text = "AddMajor";
             this.Load += new System.EventHandler(this.frmMajorDetail_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
